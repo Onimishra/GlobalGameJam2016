@@ -11,7 +11,7 @@ public class PlayerController : Controller {
 		var left = Input.GetKey (KeyCode.LeftArrow) ? 1 : 0;
 		var right = Input.GetKey (KeyCode.RightArrow) ? 1 : 0;
 
-		dir = new Vector2 (right - left, up - down);
+		dir = new Vector2 (right - left, up - down).normalized;
 	}
 
 	#region implemented abstract members of Controller

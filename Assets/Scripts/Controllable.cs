@@ -10,9 +10,9 @@ public class Controllable : MonoBehaviour {
 	public float jumpSpeed = 1;
 	public Collider bounds;
 
-	float movementDamp = 0.3f;
+	float movementDamp = 0.8f;
 
-	Vector3 position;
+	Vector3 lastMovement;
 	public GameObject entity;
 	private Vector3 origoPos;
 	private Vector3 origoScale;
@@ -26,7 +26,7 @@ public class Controllable : MonoBehaviour {
 	Boolean jumping;
 
 	protected void Start() {
-		position = transform.position;
+		lastMovement = transform.position;
 		origoPos = entity.transform.localPosition;
 		origoScale = entity.transform.localScale;
 
@@ -51,8 +51,8 @@ public class Controllable : MonoBehaviour {
 		}
 
 		var m = ctrl.Movement ();
-		var movement = new Vector2(m.x, m.y * movementDamp).normalized;
-		var fullMovement = new Vector3 (position.x + movement.x, position.y, position.z + movement.y) * Time.deltaTime * movementSpeed;
+		var movement = new Vector2(m.x, m.y * movementDamp);
+		var fullMovement = new Vector3 (lastMovement.x + movement.x, lastMovement.y, lastMovement.z + movement.y) * Time.deltaTime * movementSpeed;
 		fullMovement = new Vector3 (fullMovement.x, fullMovement.y, Mathf.Clamp(fullMovement.z, -1 , 1));
 
 		entity.transform.localScale = new Vector3(Mathf.Sign(fullMovement.x) * origoScale.x, origoScale.y, origoScale.z);
@@ -60,7 +60,7 @@ public class Controllable : MonoBehaviour {
 		var nextPosition = bounds.bounds.ClosestPoint (transform.position + new Vector3 (fullMovement.x, fullMovement.z, transform.position.z));
 
 		if(bounds.bounds.Contains(nextPosition)) {
-			position = fullMovement;
+			lastMovement = fullMovement;
 			transform.position = nextPosition;
 		}		
 	}
