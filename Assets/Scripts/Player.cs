@@ -5,7 +5,8 @@ using System.Diagnostics;
 public class Player : Controllable {
 
 	// Use this for initialization
-	void Start () {
+	new void Start () {
+		base.Start ();
 		ctrl = new PlayerController ();
 	}
 	
