@@ -70,7 +70,6 @@ public class ProgressController : MonoBehaviour {
     }
 
     void SpawnEnemies() {
-        print("spawning");
         for (int i = 0; i < _encounterNumber; i++) {
             int random = Random.Range(0, EnemyPrefabs.Length);
             Vector3 randomPosition = new Vector3(Random.Range(BoundingBox.bounds.center.x + BoundingBox.bounds.extents.x/2f, BoundingBox.bounds.max.x), Random.Range(BoundingBox.bounds.min.y, BoundingBox.bounds.max.y), 0f);

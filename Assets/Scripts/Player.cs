@@ -82,4 +82,14 @@ public class Player : Controllable, IAttacker {
 	new public GameObject entity () {
 		return gameObject;
 	}
+
+	public void GotKill (Controllable victim) {
+		var scoreBoard = FindObjectOfType<ScoreBoard> ();
+
+		var enemy = victim.GetComponent<Enemy> ();
+		if (enemy == null)
+			return;
+		
+		scoreBoard.AddScore (enemy.pointsWorth);
+	}
 }
