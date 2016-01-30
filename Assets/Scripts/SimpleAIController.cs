@@ -22,6 +22,7 @@ public class SimpleAIController : Controller {
 		return movement;
 	}
 	public override bool Jump () {
+		return false;
 		if(timer <= 0 && dist < 3) {
 			timer = 4;
 			return true;

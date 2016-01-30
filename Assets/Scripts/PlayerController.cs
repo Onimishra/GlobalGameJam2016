@@ -25,7 +25,7 @@ public class PlayerController : Controller {
 	}
 
 	public override bool Attack () {
-		throw new System.NotImplementedException ();
+		return Input.GetKey (KeyCode.S);
 	}
 
 	#endregion

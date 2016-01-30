@@ -4,7 +4,7 @@ using System;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 public class Controllable : MonoBehaviour {
-	protected Controller ctrl;
+	[Header("Controllable")]
 	public float movementSpeed = 1;
 	public float jumpHeight = 1;
 	public float jumpSpeed = 1;
@@ -12,7 +12,6 @@ public class Controllable : MonoBehaviour {
 
 	float movementDamp = 0.8f;
 
-	Vector3 lastMovement;
 	public GameObject entity;
 	private Vector3 origoPos;
 	private Vector3 origoScale;
@@ -25,8 +24,13 @@ public class Controllable : MonoBehaviour {
 	float curveTimer;
 	Boolean jumping;
 
+	protected Controller ctrl;
+	protected int health;
+
 	protected void Start() {
-		lastMovement = transform.position;
+		var p = transform.position;
+		p.z = p.y;
+		transform.position = p;
 		origoPos = entity.transform.localPosition;
 		origoScale = entity.transform.localScale;
 
@@ -52,16 +56,25 @@ public class Controllable : MonoBehaviour {
 
 		var m = ctrl.Movement ();
 		var movement = new Vector2(m.x, m.y * movementDamp);
-		var fullMovement = new Vector3 (lastMovement.x + movement.x, lastMovement.y, lastMovement.z + movement.y) * Time.deltaTime * movementSpeed;
-		fullMovement = new Vector3 (fullMovement.x, fullMovement.y, Mathf.Clamp(fullMovement.z, -1 , 1));
 
-		entity.transform.localScale = new Vector3(Mathf.Sign(fullMovement.x) * origoScale.x, origoScale.y, origoScale.z);
+		var scaledMovement = movement * Time.deltaTime * movementSpeed;
+		var desiredPos = transform.position + new Vector3 (scaledMovement.x, scaledMovement.y, scaledMovement.y);
+		var nextPosition = bounds.bounds.ClosestPoint (desiredPos);
+		nextPosition.y = nextPosition.z;
 
-		var nextPosition = bounds.bounds.ClosestPoint (transform.position + new Vector3 (fullMovement.x, fullMovement.z, transform.position.z));
+		entity.transform.localScale = new Vector3(Mathf.Sign(movement.x) * origoScale.x, origoScale.y, origoScale.z);
 
-		if(bounds.bounds.Contains(nextPosition)) {
-			lastMovement = fullMovement;
-			transform.position = nextPosition;
-		}		
+//		if(bounds.bounds.Contains(nextPosition)) {
+//			transform.position = nextPosition;
+//		} else {
+			transform.position = bounds.bounds.ClosestPoint (nextPosition);
+//		}
+	}
+
+	public void AddHealth (int amount) {
+		health += amount;
+	}
+	public int Health () {
+		return health;
 	}
 }
