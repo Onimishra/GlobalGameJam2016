@@ -13,6 +13,11 @@ public class Player : Controllable, IAttacker {
 
 	float baseMovementSpeed;
 
+    public Transform HatAttachmentPoint;
+    private List<Pickup> _attachedHats = new List<Pickup>();
+    private int baseHatLayer = 1;
+    private float _previousHatRotation = 0f;
+
 	List<AttackModifier> modifiers = new List<AttackModifier>() { new NormalDamage(3), new NormalDamage(3), new KnockBack(2) };
 	public List<AttackModifier> Modifiers() {
 		return modifiers;
@@ -54,6 +59,25 @@ public class Player : Controllable, IAttacker {
 		animator.SetTrigger ("Attacking");
 
 	}
+
+    public void AddHat(Pickup hat) {
+        Transform parent = (_attachedHats.Count == 0) ? HatAttachmentPoint.transform : _attachedHats[_attachedHats.Count - 1].AttachTop.transform;
+        hat.gameObject.transform.parent = parent;
+
+        hat.transform.localPosition = -hat.AttachBot.transform.localPosition;
+
+        //Rotate a bit
+        hat.transform.RotateAround(hat.AttachBot.position, Vector3.forward, _previousHatRotation + Random.Range(-10f, 10f));
+
+        _attachedHats.Add(hat);
+        hat.HatSprite.sortingOrder = baseHatLayer + _attachedHats.Count;
+
+
+        //Add effect 
+        modifiers.Add(hat.EffectObject.Modifier);
+    }
+
+    
 
 	new public GameObject entity () {
 		return gameObject;

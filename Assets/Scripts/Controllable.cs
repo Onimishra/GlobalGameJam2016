@@ -25,7 +25,7 @@ public class Controllable : MonoBehaviour {
 	float curveTimer;
 	Boolean jumping;
 
-	protected Controller ctrl;
+	protected Controller ctrl = new NonController();
 
 	[SerializeField]
 	protected int health;
@@ -33,13 +33,18 @@ public class Controllable : MonoBehaviour {
 	protected Animator animator;
 
 	protected void Start() {
+        if (!entity) {
+            entity = gameObject;
+        }
+
 		var p = transform.position;
 		p.z = p.y;
 		transform.position = p;
 		origoPos = entity.transform.localPosition;
 		origoScale = entity.transform.localScale;
-
-		shadowOrigoScale = shadow.transform.localScale;
+        if (shadow) {
+            shadowOrigoScale = shadow.transform.localScale;
+        }
 
 		animator = GetComponentInChildren<Animator> ();
         if (!bounds) {
@@ -60,7 +65,9 @@ public class Controllable : MonoBehaviour {
 			shadow.transform.localScale = shadowOrigoScale + shadowOrigoScale * -curveEval;
 		} else {
 			entity.transform.localPosition = origoPos;
-			shadow.transform.localScale = shadowOrigoScale;
+            if (shadow) {
+                shadow.transform.localScale = shadowOrigoScale;
+            }
 			curveTimer = 0;
 		}
 
