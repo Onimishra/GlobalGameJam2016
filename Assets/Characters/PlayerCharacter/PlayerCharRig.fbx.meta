@@ -48,6 +48,22 @@ ModelImporter:
     100080: //RootNode
     100082: Root
     100084: PlayerCharacterFace_Mesh
+    100086: PlayerCharacter_Face_Happy01
+    100088: PlayerCharacter_Face_Happy02
+    100090: PlayerCharacter_Face_Happy03
+    100092: PlayerCharacter_Face_Happy04
+    100094: PlayerCharacter_Face_Happy05
+    100096: PlayerCharacter_Face_Idle01
+    100098: PlayerCharacter_Face_Idle02
+    100100: PlayerCharacter_Face_Idle03
+    100102: PlayerCharacter_Face_Idle04
+    100104: PlayerCharacter_Face_Idle05
+    100106: PlayerCharacter_Face_TakeDamage01
+    100108: PlayerCharacter_Face_TakeDamage02
+    100110: PlayerCharacter_Face_TakeDamage03
+    100112: PlayerCharacter_Face_TakeDamage04
+    100114: PlayerCharacter_Face_TakeDamage05
+    100116: PlayerCharacter_Face_TakeDamage06
     400000: Arm_L_01
     400002: Arm_L_02
     400004: Arm_L_03
@@ -91,13 +107,61 @@ ModelImporter:
     400080: //RootNode
     400082: Root
     400084: PlayerCharacterFace_Mesh
+    400086: PlayerCharacter_Face_Happy01
+    400088: PlayerCharacter_Face_Happy02
+    400090: PlayerCharacter_Face_Happy03
+    400092: PlayerCharacter_Face_Happy04
+    400094: PlayerCharacter_Face_Happy05
+    400096: PlayerCharacter_Face_Idle01
+    400098: PlayerCharacter_Face_Idle02
+    400100: PlayerCharacter_Face_Idle03
+    400102: PlayerCharacter_Face_Idle04
+    400104: PlayerCharacter_Face_Idle05
+    400106: PlayerCharacter_Face_TakeDamage01
+    400108: PlayerCharacter_Face_TakeDamage02
+    400110: PlayerCharacter_Face_TakeDamage03
+    400112: PlayerCharacter_Face_TakeDamage04
+    400114: PlayerCharacter_Face_TakeDamage05
+    400116: PlayerCharacter_Face_TakeDamage06
     4300000: PlayerCharacter_Mesh
     4300002: PlayerCharacterFace_Mesh
+    4300004: PlayerCharacter_Face_Happy05
+    4300006: PlayerCharacter_Face_Happy04
+    4300008: PlayerCharacter_Face_TakeDamage06
+    4300010: PlayerCharacter_Face_Idle05
+    4300012: PlayerCharacter_Face_Idle04
+    4300014: PlayerCharacter_Face_TakeDamage05
+    4300016: PlayerCharacter_Face_Idle02
+    4300018: PlayerCharacter_Face_TakeDamage04
+    4300020: PlayerCharacter_Face_Idle01
+    4300022: PlayerCharacter_Face_TakeDamage03
+    4300024: PlayerCharacter_Face_Happy03
+    4300026: PlayerCharacter_Face_Happy02
+    4300028: PlayerCharacter_Face_TakeDamage02
+    4300030: PlayerCharacter_Face_Happy01
+    4300032: PlayerCharacter_Face_Idle03
+    4300034: PlayerCharacter_Face_TakeDamage01
     7400000: Default Take
     7400002: Walk_Forward
     9500000: //RootNode
     13700000: PlayerCharacter_Mesh
     13700002: PlayerCharacterFace_Mesh
+    13700004: PlayerCharacter_Face_Happy01
+    13700006: PlayerCharacter_Face_Happy02
+    13700008: PlayerCharacter_Face_Happy03
+    13700010: PlayerCharacter_Face_Happy04
+    13700012: PlayerCharacter_Face_Happy05
+    13700014: PlayerCharacter_Face_Idle01
+    13700016: PlayerCharacter_Face_Idle02
+    13700018: PlayerCharacter_Face_Idle03
+    13700020: PlayerCharacter_Face_Idle04
+    13700022: PlayerCharacter_Face_Idle05
+    13700024: PlayerCharacter_Face_TakeDamage01
+    13700026: PlayerCharacter_Face_TakeDamage02
+    13700028: PlayerCharacter_Face_TakeDamage03
+    13700030: PlayerCharacter_Face_TakeDamage04
+    13700032: PlayerCharacter_Face_TakeDamage05
+    13700034: PlayerCharacter_Face_TakeDamage06
   materials:
     importMaterials: 1
     materialName: 0
