@@ -53,11 +53,12 @@ public class Enemy : Controllable, IAttacker {
 		plane.Mask = AttackPlane.HitMask.Hero;
 		plane.transform.position = transform.position + Vector3.up * 0.8f;
 
+
+		GameObject.Destroy (gameObject, 1);
 		gameObject.SetActive (false);
 
 		yield return new WaitForSeconds (1);
 
-		GameObject.Destroy (gameObject);
 	}
 
 

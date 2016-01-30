@@ -143,6 +143,12 @@ ModelImporter:
     4300034: PlayerCharacter_Face_TakeDamage01
     7400000: Default Take
     7400002: Walk_Forward
+    7400004: Idle_01
+    7400006: Idle_BellyRub
+    7400008: Idle_Wave
+    7400010: Attack_Light
+    7400012: Attack_Rotating
+    7400014: Idle_Legs
     9500000: //RootNode
     13700000: PlayerCharacter_Mesh
     13700002: PlayerCharacterFace_Mesh
@@ -184,10 +190,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Default Take
-      takeName: Default Take
-      firstFrame: -1
-      lastFrame: 29
+      name: Idle_Legs
+      takeName: Walk_Forward
+      firstFrame: 0
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -298,10 +304,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Walk_Forward
-      takeName: Walk_Forward
-      firstFrame: -1
-      lastFrame: 29
+      name: Idle_01
+      takeName: Idle_01
+      firstFrame: 0
+      lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -366,11 +372,11 @@ ModelImporter:
         weight: 1
       - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower
         weight: 1
-      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Ear
-        weight: 1
-      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Emotion
-        weight: 1
       - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Ear
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Face_Emotion
         weight: 1
       - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Hair
         weight: 1
@@ -404,9 +410,759 @@ ModelImporter:
         weight: 1
       - path: PlayerCharacter/Root/Neck_IK
         weight: 1
+      - path: PlayerCharacter_Face_Happy01
+        weight: 1
+      - path: PlayerCharacter_Face_Happy02
+        weight: 1
+      - path: PlayerCharacter_Face_Happy03
+        weight: 1
+      - path: PlayerCharacter_Face_Happy04
+        weight: 1
+      - path: PlayerCharacter_Face_Happy05
+        weight: 1
+      - path: PlayerCharacter_Face_Idle01
+        weight: 1
+      - path: PlayerCharacter_Face_Idle02
+        weight: 1
+      - path: PlayerCharacter_Face_Idle03
+        weight: 1
+      - path: PlayerCharacter_Face_Idle04
+        weight: 1
+      - path: PlayerCharacter_Face_Idle05
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage01
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage02
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage03
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage04
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage05
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage06
+        weight: 1
       - path: PlayerCharacter_Mesh
         weight: 1
-      - path: PlayerCharacterFace_Mesh
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle_BellyRub
+      takeName: Idle_BellyRub
+      firstFrame: 0
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PlayerCharacter
+        weight: 1
+      - path: PlayerCharacter/Root
+        weight: 1
+      - path: PlayerCharacter/Root/Arm_L_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Arm_R_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Hips
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04/Arm_L_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04/Arm_L_05/Arm_L_Sword
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04/Arm_R_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04/Arm_R_05/Arm_R_Sword
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Ear
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Face_Emotion
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Hair
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04/Leg_L_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04/Leg_L_05/Leg_L_Foot
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04/Leg_R_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04/Leg_R_05/Leg_R_Foot
+        weight: 1
+      - path: PlayerCharacter/Root/Leg_L_Foot_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Leg_R_Foot_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Neck_IK
+        weight: 1
+      - path: PlayerCharacter_Face_Happy01
+        weight: 1
+      - path: PlayerCharacter_Face_Happy02
+        weight: 1
+      - path: PlayerCharacter_Face_Happy03
+        weight: 1
+      - path: PlayerCharacter_Face_Happy04
+        weight: 1
+      - path: PlayerCharacter_Face_Happy05
+        weight: 1
+      - path: PlayerCharacter_Face_Idle01
+        weight: 1
+      - path: PlayerCharacter_Face_Idle02
+        weight: 1
+      - path: PlayerCharacter_Face_Idle03
+        weight: 1
+      - path: PlayerCharacter_Face_Idle04
+        weight: 1
+      - path: PlayerCharacter_Face_Idle05
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage01
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage02
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage03
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage04
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage05
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage06
+        weight: 1
+      - path: PlayerCharacter_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle_Wave
+      takeName: Idle_Wave
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PlayerCharacter
+        weight: 1
+      - path: PlayerCharacter/Root
+        weight: 1
+      - path: PlayerCharacter/Root/Arm_L_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Arm_R_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Hips
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04/Arm_L_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04/Arm_L_05/Arm_L_Sword
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04/Arm_R_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04/Arm_R_05/Arm_R_Sword
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Ear
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Face_Emotion
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Hair
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04/Leg_L_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04/Leg_L_05/Leg_L_Foot
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04/Leg_R_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04/Leg_R_05/Leg_R_Foot
+        weight: 1
+      - path: PlayerCharacter/Root/Leg_L_Foot_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Leg_R_Foot_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Neck_IK
+        weight: 1
+      - path: PlayerCharacter_Face_Happy01
+        weight: 1
+      - path: PlayerCharacter_Face_Happy02
+        weight: 1
+      - path: PlayerCharacter_Face_Happy03
+        weight: 1
+      - path: PlayerCharacter_Face_Happy04
+        weight: 1
+      - path: PlayerCharacter_Face_Happy05
+        weight: 1
+      - path: PlayerCharacter_Face_Idle01
+        weight: 1
+      - path: PlayerCharacter_Face_Idle02
+        weight: 1
+      - path: PlayerCharacter_Face_Idle03
+        weight: 1
+      - path: PlayerCharacter_Face_Idle04
+        weight: 1
+      - path: PlayerCharacter_Face_Idle05
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage01
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage02
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage03
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage04
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage05
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage06
+        weight: 1
+      - path: PlayerCharacter_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk_Forward
+      takeName: Walk_Forward
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PlayerCharacter
+        weight: 1
+      - path: PlayerCharacter/Root
+        weight: 1
+      - path: PlayerCharacter/Root/Arm_L_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Arm_R_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Hips
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04/Arm_L_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04/Arm_L_05/Arm_L_Sword
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04/Arm_R_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04/Arm_R_05/Arm_R_Sword
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Ear
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Face_Emotion
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Hair
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04/Leg_L_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04/Leg_L_05/Leg_L_Foot
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04/Leg_R_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04/Leg_R_05/Leg_R_Foot
+        weight: 1
+      - path: PlayerCharacter/Root/Leg_L_Foot_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Leg_R_Foot_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Neck_IK
+        weight: 1
+      - path: PlayerCharacter_Face_Happy01
+        weight: 1
+      - path: PlayerCharacter_Face_Happy02
+        weight: 1
+      - path: PlayerCharacter_Face_Happy03
+        weight: 1
+      - path: PlayerCharacter_Face_Happy04
+        weight: 1
+      - path: PlayerCharacter_Face_Happy05
+        weight: 1
+      - path: PlayerCharacter_Face_Idle01
+        weight: 1
+      - path: PlayerCharacter_Face_Idle02
+        weight: 1
+      - path: PlayerCharacter_Face_Idle03
+        weight: 1
+      - path: PlayerCharacter_Face_Idle04
+        weight: 1
+      - path: PlayerCharacter_Face_Idle05
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage01
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage02
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage03
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage04
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage05
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage06
+        weight: 1
+      - path: PlayerCharacter_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack_Light
+      takeName: Attack_Light
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PlayerCharacter
+        weight: 1
+      - path: PlayerCharacter/Root
+        weight: 1
+      - path: PlayerCharacter/Root/Arm_L_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Arm_R_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Hips
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04/Arm_L_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04/Arm_L_05/Arm_L_Sword
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04/Arm_R_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04/Arm_R_05/Arm_R_Sword
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Ear
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Face_Emotion
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Hair
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04/Leg_L_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04/Leg_L_05/Leg_L_Foot
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04/Leg_R_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04/Leg_R_05/Leg_R_Foot
+        weight: 1
+      - path: PlayerCharacter/Root/Leg_L_Foot_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Leg_R_Foot_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Neck_IK
+        weight: 1
+      - path: PlayerCharacter_Face_Happy01
+        weight: 1
+      - path: PlayerCharacter_Face_Happy02
+        weight: 1
+      - path: PlayerCharacter_Face_Happy03
+        weight: 1
+      - path: PlayerCharacter_Face_Happy04
+        weight: 1
+      - path: PlayerCharacter_Face_Happy05
+        weight: 1
+      - path: PlayerCharacter_Face_Idle01
+        weight: 1
+      - path: PlayerCharacter_Face_Idle02
+        weight: 1
+      - path: PlayerCharacter_Face_Idle03
+        weight: 1
+      - path: PlayerCharacter_Face_Idle04
+        weight: 1
+      - path: PlayerCharacter_Face_Idle05
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage01
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage02
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage03
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage04
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage05
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage06
+        weight: 1
+      - path: PlayerCharacter_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack_Rotating
+      takeName: Attack_Rotating
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PlayerCharacter
+        weight: 1
+      - path: PlayerCharacter/Root
+        weight: 1
+      - path: PlayerCharacter/Root/Arm_L_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Arm_R_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Hips
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04/Arm_L_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_L_01/Arm_L_02/Arm_L_03/Arm_L_04/Arm_L_05/Arm_L_Sword
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04/Arm_R_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Arm_R_01/Arm_R_02/Arm_R_03/Arm_R_04/Arm_R_05/Arm_R_Sword
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Ear
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Face_Emotion
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Belly/Chest/Neck/Face_lower/Face_Upper/Hair
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04/Leg_L_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_L_01/Leg_L_02/Leg_L_03/Leg_L_04/Leg_L_05/Leg_L_Foot
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04/Leg_R_05
+        weight: 1
+      - path: PlayerCharacter/Root/Hips/Leg_R_01/Leg_R_02/Leg_R_03/Leg_R_04/Leg_R_05/Leg_R_Foot
+        weight: 1
+      - path: PlayerCharacter/Root/Leg_L_Foot_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Leg_R_Foot_IK
+        weight: 1
+      - path: PlayerCharacter/Root/Neck_IK
+        weight: 1
+      - path: PlayerCharacter_Face_Happy01
+        weight: 1
+      - path: PlayerCharacter_Face_Happy02
+        weight: 1
+      - path: PlayerCharacter_Face_Happy03
+        weight: 1
+      - path: PlayerCharacter_Face_Happy04
+        weight: 1
+      - path: PlayerCharacter_Face_Happy05
+        weight: 1
+      - path: PlayerCharacter_Face_Idle01
+        weight: 1
+      - path: PlayerCharacter_Face_Idle02
+        weight: 1
+      - path: PlayerCharacter_Face_Idle03
+        weight: 1
+      - path: PlayerCharacter_Face_Idle04
+        weight: 1
+      - path: PlayerCharacter_Face_Idle05
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage01
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage02
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage03
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage04
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage05
+        weight: 1
+      - path: PlayerCharacter_Face_TakeDamage06
+        weight: 1
+      - path: PlayerCharacter_Mesh
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
