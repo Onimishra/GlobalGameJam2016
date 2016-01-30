@@ -58,6 +58,7 @@ public class Player : Controllable, IAttacker {
 		plane.transform.position = attackOrigo.position;
 		var s = plane.transform.localScale;
 		s.x = s.x * dir;
+		plane.transform.SetParent (null);
 		plane.transform.localScale = s;
 		plane.Mask = AttackPlane.HitMask.Evils;
 		plane.Owner = this;

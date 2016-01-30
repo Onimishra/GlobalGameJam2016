@@ -23,7 +23,7 @@ public class EnemyTongue : Controllable, IAttacker {
 
 		plane.Owner = this;
 		plane.Mask = AttackPlane.HitMask.Hero;
-		plane.LifeSpan = -1;
+		plane.LifeSpan = -100;
 		plane.Direction = AttackPlane.AttackDirection.Static;
 	}
 	

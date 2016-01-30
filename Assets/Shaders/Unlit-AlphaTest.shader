@@ -5,7 +5,7 @@
 
 Shader "Custom/Transparent Cutout W/ Tint" {
 Properties {
-	_TintColor ("Tint Color", Color) = (0.5,0.5,0.5,0.5)
+	_Color ("Tint Color", Color) = (0.5,0.5,0.5,0.5)
 	_MainTex ("Base (RGB) Trans (A)", 2D) = "white" {}
 	_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
 }
@@ -37,7 +37,7 @@ SubShader {
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
 			fixed _Cutoff;
-			fixed4 _TintColor;
+			fixed4 _Color;
 
 			v2f vert (appdata_t v)
 			{
@@ -50,7 +50,7 @@ SubShader {
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
-				fixed4 col = _TintColor * tex2D(_MainTex, i.texcoord);
+				fixed4 col = _Color * tex2D(_MainTex, i.texcoord);
 				clip(col.a - _Cutoff);
 				UNITY_APPLY_FOG(i.fogCoord, col);
 				return col;

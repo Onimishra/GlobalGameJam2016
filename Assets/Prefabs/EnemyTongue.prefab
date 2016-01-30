@@ -180,6 +180,7 @@ GameObject:
   - 4: {fileID: 436904}
   - 95: {fileID: 9545014}
   - 54: {fileID: 5467554}
+  - 65: {fileID: 6541644}
   m_Layer: 0
   m_Name: EnemyTongue
   m_TagString: Untagged
@@ -242,6 +243,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 426244}
   - 137: {fileID: 13758982}
+  - 114: {fileID: 11490128}
+  - 65: {fileID: 6577188}
   m_Layer: 0
   m_Name: EnemyTongue_Face_AttackTongue
   m_TagString: Untagged
@@ -619,7 +622,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183762}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 3.64, y: -2.07, z: -0.29}
+  m_LocalPosition: {x: 0.5, y: -3.6796412, z: -0.24}
   m_LocalScale: {x: 2.311582, y: 2.311583, z: 2.311583}
   m_Children:
   - {fileID: 436904}
@@ -783,6 +786,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6541644
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.63, y: 1.09, z: 0.2}
+  m_Center: {x: 0, y: 0.56, z: 0}
+--- !u!65 &6577188
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.021651803, y: 0.008120576, z: 0.0138741}
+  m_Center: {x: -0.010886592, y: -0.0014567312, z: 0.0057987412}
 --- !u!95 &9545014
 Animator:
   serializedVersion: 3
@@ -834,6 +861,22 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+  Disabled: 0
+  plane: {fileID: 11490128}
+  windupFace: {fileID: 131356}
+  idleFace: {fileID: 159152}
+  tongueFace: {fileID: 157638}
+--- !u!114 &11490128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33960529608c7469d88ad62cb1a20c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &13724792
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

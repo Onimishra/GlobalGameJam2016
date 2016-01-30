@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: No Name
-  m_Shader: {fileID: 10751, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 5a80566a401f392439c595d418d9b773, type: 3}
   m_ShaderKeywords: _ALPHATEST_ON
   m_LightmapFlags: 1
   m_CustomRenderQueue: 2450
@@ -194,4 +194,4 @@ Material:
       data:
         first:
           name: _TintColor
-        second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+        second: {r: 0.5377566, g: 0.46031573, b: 0.9485294, a: 1}
