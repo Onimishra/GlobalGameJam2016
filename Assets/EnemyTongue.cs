@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class EnemyTongue : Controllable, IAttacker {
+public class EnemyTongue : Enemy, IAttacker {
 	private List<AttackModifier> mods = new List<AttackModifier> () { new NormalDamage (10), new KnockBack (2) };
 
 	[Header("Tongue Monster")]

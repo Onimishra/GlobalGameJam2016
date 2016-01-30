@@ -50,6 +50,7 @@ class TongueController : Controller{
 		attack = false;
 
 		if (dist < 3 && attackCooldown < 0) {
+			movement = (closest.transform.position - entity.transform.position).normalized;
 			attackCooldown = baseAttackCooldown;
 			attack = true;
 		} else if(attackCooldown < 0) {

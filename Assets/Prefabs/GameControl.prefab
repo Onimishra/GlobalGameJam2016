@@ -78,8 +78,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 427508}
-  - {fileID: 486290}
   - {fileID: 445042}
+  - {fileID: 486290}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &427508
@@ -105,7 +105,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407116}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &486290
 Transform:
   m_ObjectHideFlags: 1
@@ -117,7 +117,7 @@ Transform:
   m_LocalScale: {x: 3.3613396, y: 0.72063637, z: 0.899355}
   m_Children: []
   m_Father: {fileID: 407116}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!20 &2004674
 Camera:
   m_ObjectHideFlags: 1
@@ -191,7 +191,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   EnemyPrefabs:
-  - {fileID: 136108, guid: c4dd36d210a524042b8e93481b297423, type: 2}
+  - {fileID: 114048, guid: f7f2d609d83a745fdb35cacf5a7ecd8c, type: 2}
+  - {fileID: 183762, guid: 1208af54f7e564903b647e2eaab3d1d9, type: 2}
   Enemies: []
   MoveCameraForwardPoint: {fileID: 445042}
   BoundingBox: {fileID: 6540618}
