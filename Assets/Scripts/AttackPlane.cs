@@ -11,9 +11,16 @@ public class AttackPlane : MonoBehaviour {
 	public float MovementSpeed { get; set; }
 	public IAttacker Owner { get; set; }
 
+	private Renderer renderer;
+	private Color baseColor;
+
 	// Use this for initialization
 	void Start () {
 		transform.SetParent (null);
+		renderer = GetComponent<Renderer> ();
+		baseColor = renderer.material.color;
+		baseColor.a = 0;
+		renderer.material.color = baseColor;
 	}
 	
 	// Update is called once per frame
@@ -23,6 +30,9 @@ public class AttackPlane : MonoBehaviour {
 			return;
 		}
 		LifeSpan -= Time.deltaTime;
+
+		baseColor.a = Mathf.Clamp01 (renderer.material.color.a + Time.deltaTime * 10);
+		renderer.material.color = baseColor;
 
 		transform.Translate (new Vector3 ((float)Direction, 0, 0) * MovementSpeed * Time.deltaTime);
 	}
