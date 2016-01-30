@@ -27,7 +27,6 @@ public class Controllable : MonoBehaviour {
 
 	protected Controller ctrl;
 
-	[SerializeField]
 	protected int health;
 
 	protected Animator animator;

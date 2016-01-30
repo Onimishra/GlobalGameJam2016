@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Enemy : Controllable, IAttacker {
 	
 	private bool attacking;
+	public int pointsWorth;
 
 	public AttackPlane attackPlane;
 	public List<AttackModifier> modifiers = new List<AttackModifier> () { 
@@ -69,5 +70,9 @@ public class Enemy : Controllable, IAttacker {
 
 	public GameObject entity () {
 		return gameObject;
+	}
+
+	public void GetKill (Controllable victim) {
+		// Nothing really should happen here.
 	}
 }
