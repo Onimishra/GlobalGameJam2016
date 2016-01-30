@@ -15,8 +15,7 @@ public class AttackPlane : MonoBehaviour {
 	private Color baseColor;
 
 	// Use this for initialization
-	void Start () {
-		transform.SetParent (null);
+	void Awake () {
 		renderer = GetComponent<Renderer> ();
 		baseColor = renderer.material.color;
 		baseColor.a = 0;
@@ -25,11 +24,12 @@ public class AttackPlane : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (LifeSpan < 0) {
+		if (LifeSpan < 0 && LifeSpan > -10) {
 			GameObject.Destroy (gameObject);
 			return;
 		}
-		LifeSpan -= Time.deltaTime;
+		if(LifeSpan > -10)
+			LifeSpan -= Time.deltaTime;
 
 		baseColor.a = Mathf.Clamp01 (renderer.material.color.a + Time.deltaTime * 10);
 		renderer.material.color = baseColor;
