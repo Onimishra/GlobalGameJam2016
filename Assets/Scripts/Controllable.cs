@@ -42,6 +42,9 @@ public class Controllable : MonoBehaviour {
 		shadowOrigoScale = shadow.transform.localScale;
 
 		animator = GetComponentInChildren<Animator> ();
+        if (!bounds) {
+            bounds = GameObject.FindGameObjectWithTag("Bounds").GetComponent<BoxCollider>();
+        }
 	}
 	
 	// Update is called once per frame
