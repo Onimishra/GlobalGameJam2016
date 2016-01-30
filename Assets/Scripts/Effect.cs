@@ -12,8 +12,22 @@ public class Effect {
             case EffectType.KnockBack:
                 Modifier = new KnockBack(Amount);
                 break;
+            case EffectType.MoveFaster:
+                Modifier = new MoveFaster(Amount);
+                break;
+            case EffectType.MoveSlower:
+                Modifier = new MoveSlower(Amount);
+                break;
+            case EffectType.UpsideDown:
+                Modifier = new UpsideDown((int)Amount);
+                break;
+            case EffectType.Fear:
+                Modifier = new Fear((int)Amount);
+                break;
+            case EffectType.AddEffect:
+                Modifier = new AddEffect((int)Amount);
+                break;
             default:
-                Modifier = null;
                 break;
         }
     }
@@ -21,5 +35,10 @@ public class Effect {
 
 public enum EffectType {
     AddDamage,
-    KnockBack
+    KnockBack,
+    MoveFaster,
+    MoveSlower,
+    UpsideDown, 
+    Fear,
+    AddEffect
 }
