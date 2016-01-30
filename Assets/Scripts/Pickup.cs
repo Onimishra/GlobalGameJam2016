@@ -67,7 +67,7 @@ public class Pickup : MonoBehaviour {
             return;
         }
         if (col.tag == _p) {
-            //print("hi player ");
+            print("hi player ");
             player = col.transform.parent.GetComponent<Player>();
             player.AddHat(this);
             _baseRotation = transform.rotation;
