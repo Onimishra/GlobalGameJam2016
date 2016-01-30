@@ -19,6 +19,7 @@ public class Player : Controllable, IAttacker {
     private List<Pickup> _attachedHats = new List<Pickup>();
     private int baseHatLayer = 1;
     private float _previousHatRotation = 0f;
+    public HatHolder HatHolderObject;
 
     [SerializeField]
     public AnimationCurve HatCurve;
@@ -34,6 +35,7 @@ public class Player : Controllable, IAttacker {
 		health = 100;
 		baseMovementSpeed = movementSpeed;
 		ctrl = new PlayerController ();
+        HatHolderObject = GameObject.Find("HatHolder").GetComponent<HatHolder>();
 	}
 	
 	// Update is called once per frame
@@ -70,13 +72,13 @@ public class Player : Controllable, IAttacker {
 	}
 
     public void AddHat(Pickup hat) {
-        Transform parent = (_attachedHats.Count == 0) ? HatAttachmentPoint.transform : _attachedHats[_attachedHats.Count - 1].AttachTop.transform;
+        Transform parent = HatHolderObject.GetParentForHat();
+        HatHolderObject.Hats.Add(hat);
         hat.gameObject.transform.parent = parent;
-
         hat.transform.localPosition = -hat.AttachBot.transform.localPosition;
 
         //Rotate a bit
-        hat.transform.RotateAround(hat.AttachBot.position, Vector3.forward, _previousHatRotation + Random.Range(-10f, 10f));
+        //hat.transform.RotateAround(hat.AttachBot.position, Vector3.forward, _previousHatRotation + Random.Range(-10f, 10f));
 
         _attachedHats.Add(hat);
         hat.HatSprite.sortingOrder = baseHatLayer + _attachedHats.Count;
@@ -97,13 +99,17 @@ public class Player : Controllable, IAttacker {
     }
 
     private IEnumerator DropHats() {
+        List<Pickup> droppedHats = new List<Pickup>();
         foreach (var hat in _attachedHats) {
             modifiers.Remove(hat.EffectObject.Modifier);
+            droppedHats.Add(hat);
         }
+        _attachedHats.Clear();
         yield return new WaitForSeconds(0.05f);
-        for (int i = _attachedHats.Count - 1; i >= 0; i--) {
-            var hat = _attachedHats[i];
+        for (int i = droppedHats.Count - 1; i >= 0; i--) {
+            var hat = droppedHats[i];
             hat.transform.SetParent(null);
+            HatHolderObject.Hats.Remove(hat);
             //Find a position for the hat
             Vector3 target = new Vector3(Random.Range(bounds.bounds.min.x, bounds.bounds.max.x), Random.Range(bounds.bounds.min.y, bounds.bounds.max.y), bounds.bounds.center.z);
             Vector3 midTarget = transform.position + (target - transform.position) / 2f;
@@ -114,13 +120,13 @@ public class Player : Controllable, IAttacker {
             mySequence.Append(hat.transform.DOJump(target, 6f, 1, 1f));
         }
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.2f);
 
 
-        foreach (var hat in _attachedHats) {
+        foreach (var hat in droppedHats) {
             hat.EnablePickup();
         }
-        _attachedHats.Clear();
+        
     }
 
     
