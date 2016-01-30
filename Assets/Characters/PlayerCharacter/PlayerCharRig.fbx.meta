@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: 2667a144e636c18408e7153937c9d1c9
+timeCreated: 1454156898
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm_L_01
+    100002: Arm_L_02
+    100004: Arm_L_03
+    100006: Arm_L_04
+    100008: Arm_L_05
+    100010: Arm_L_IK
+    100012: Arm_L_Sword
+    100014: Arm_R_01
+    100016: Arm_R_02
+    100018: Arm_R_03
+    100020: Arm_R_04
+    100022: Arm_R_05
+    100024: Arm_R_IK
+    100026: Arm_R_Sword
+    100028: Belly
+    100030: Chest
+    100032: Ear
+    100034: Face_Emotion
+    100036: Face_lower
+    100038: Face_Upper
+    100040: Hair
+    100042: Hips
+    100044: Leg_L_01
+    100046: Leg_L_02
+    100048: Leg_L_03
+    100050: Leg_L_04
+    100052: Leg_L_05
+    100054: Leg_L_Foot
+    100056: Leg_L_Foot_IK
+    100058: Leg_R_01
+    100060: Leg_R_02
+    100062: Leg_R_03
+    100064: Leg_R_04
+    100066: Leg_R_05
+    100068: Leg_R_Foot
+    100070: Leg_R_Foot_IK
+    100072: Neck
+    100074: Neck_IK
+    100076: PlayerCharacter
+    100078: PlayerCharacter_Mesh
+    100080: //RootNode
+    100082: Root
+    100084: PlayerCharacterFace_Mesh
+    400000: Arm_L_01
+    400002: Arm_L_02
+    400004: Arm_L_03
+    400006: Arm_L_04
+    400008: Arm_L_05
+    400010: Arm_L_IK
+    400012: Arm_L_Sword
+    400014: Arm_R_01
+    400016: Arm_R_02
+    400018: Arm_R_03
+    400020: Arm_R_04
+    400022: Arm_R_05
+    400024: Arm_R_IK
+    400026: Arm_R_Sword
+    400028: Belly
+    400030: Chest
+    400032: Ear
+    400034: Face_Emotion
+    400036: Face_lower
+    400038: Face_Upper
+    400040: Hair
+    400042: Hips
+    400044: Leg_L_01
+    400046: Leg_L_02
+    400048: Leg_L_03
+    400050: Leg_L_04
+    400052: Leg_L_05
+    400054: Leg_L_Foot
+    400056: Leg_L_Foot_IK
+    400058: Leg_R_01
+    400060: Leg_R_02
+    400062: Leg_R_03
+    400064: Leg_R_04
+    400066: Leg_R_05
+    400068: Leg_R_Foot
+    400070: Leg_R_Foot_IK
+    400072: Neck
+    400074: Neck_IK
+    400076: PlayerCharacter
+    400078: PlayerCharacter_Mesh
+    400080: //RootNode
+    400082: Root
+    400084: PlayerCharacterFace_Mesh
+    4300000: PlayerCharacter_Mesh
+    4300002: PlayerCharacterFace_Mesh
+    7400000: Default Take
+    7400002: Walk_Forward
+    9500000: //RootNode
+    13700000: PlayerCharacter_Mesh
+    13700002: PlayerCharacterFace_Mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
