@@ -37,6 +37,7 @@ public class Player : Controllable, IAttacker {
 	public void Attack() {
 		var plane = GameObject.Instantiate<AttackPlane> (normalAttackPlane);
 		plane.transform.position = attackOrigo.position;
+		plane.Mask = AttackPlane.HitMask.Evils;
 		plane.Owner = this;
 		plane.Direction = ctrl.Movement ().x < 0 ? AttackPlane.AttackDirection.Left : AttackPlane.AttackDirection.Right;
 		plane.LifeSpan = 0.1f;

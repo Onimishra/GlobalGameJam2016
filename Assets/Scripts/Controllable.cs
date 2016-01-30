@@ -5,6 +5,7 @@ using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 public class Controllable : MonoBehaviour {
 	[Header("Controllable")]
+	public AttackPlane.HitMask hitMask;
 	public float movementSpeed = 1;
 	public float jumpHeight = 1;
 	public float jumpSpeed = 1;
@@ -25,6 +26,8 @@ public class Controllable : MonoBehaviour {
 	Boolean jumping;
 
 	protected Controller ctrl;
+
+	[SerializeField]
 	protected int health;
 
 	private Animator animator;

@@ -31,7 +31,10 @@ public class SimpleAIController : Controller {
 		return false;
 	}
 	public override bool Attack () {
-		throw new System.NotImplementedException ();
+		if(dist < 1) {
+			return true;
+		}
+		return false;
 	}
 	public override void Update () {
 		float smallestDist = float.MaxValue;

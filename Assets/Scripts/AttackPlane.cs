@@ -2,8 +2,10 @@
 using System.Collections;
 
 public class AttackPlane : MonoBehaviour {
-	public enum AttackDirection { Left = -1, Right = 1 }
+	public enum AttackDirection { Static = 0, Left = -1, Right = 1,  }
+	public enum HitMask { All, Hero, Evils }
 
+	public HitMask Mask { get; set; }
 	public float LifeSpan { get; set; }
 	public AttackDirection Direction { get; set; }
 	public float MovementSpeed { get; set; }
@@ -30,9 +32,11 @@ public class AttackPlane : MonoBehaviour {
 		if (victim == null) {
 			return;
 		}
-		
-		foreach(var modifier in Owner.Modifiers()) {
-			modifier.ApplyEffect (Owner, victim);
+
+		if (victim.hitMask == Mask || victim.hitMask == HitMask.All || Mask == HitMask.All) {
+			foreach (var modifier in Owner.Modifiers()) {
+				modifier.ApplyEffect (Owner, victim);
+			}
 		}
 	}
 }

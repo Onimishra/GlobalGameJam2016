@@ -2,7 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Enemy : Controllable {
+public class Enemy : Controllable, IAttacker {
+	
+	private bool attacking;
+
+	public AttackPlane attackPlane;
+	public List<AttackModifier> modifiers = new List<AttackModifier> () { 
+		new NormalDamage (5), new NormalDamage (5), 
+		new NormalDamage (5), new KnockBack (5)
+	};
 
 	// Use this for initialization
 	new void Start () {
@@ -18,5 +26,47 @@ public class Enemy : Controllable {
 		if(health <= 0) {
 			GameObject.Destroy (gameObject);
 		}
+
+		if(ctrl.Attack() && !attacking) {
+			attacking = true;
+			StartCoroutine (StartAttack ());
+		}
+	}
+
+	IEnumerator StartAttack() {
+		float timer = 1;
+		var renderer = GetComponentsInChildren<Renderer> ();
+		Color c = Color.white;
+		while(timer > 0.1f) {
+			foreach(var r in renderer) {
+				r.material.color = c;
+			}
+			yield return new WaitForSeconds (timer / 5);
+			timer -= timer / 5;
+
+			c = c == Color.white ? Color.black : Color.white;
+		}
+
+		var plane = GameObject.Instantiate<AttackPlane> (attackPlane);
+		plane.Owner = this;
+		plane.LifeSpan = 0.4f;
+		plane.Mask = AttackPlane.HitMask.Hero;
+		plane.transform.position = transform.position + Vector3.up * 0.5f;
+
+		gameObject.SetActive (false);
+
+		yield return new WaitForSeconds (1);
+
+		GameObject.Destroy (gameObject);
+	}
+
+
+
+	public List<AttackModifier> Modifiers () {
+		return modifiers;
+	}
+
+	public GameObject entity () {
+		return gameObject;
 	}
 }
