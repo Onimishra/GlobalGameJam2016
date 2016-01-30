@@ -39,7 +39,7 @@ public class AttackPlane : MonoBehaviour {
 			}
 
 			if (victim.Health () <= 0)
-				Owner.GetKill (victim);
+				Owner.GotKill (victim);
 		}
 	}
 }

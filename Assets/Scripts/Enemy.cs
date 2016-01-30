@@ -72,7 +72,7 @@ public class Enemy : Controllable, IAttacker {
 		return gameObject;
 	}
 
-	public void GetKill (Controllable victim) {
+	public void GotKill (Controllable victim) {
 		// Nothing really should happen here.
 	}
 }

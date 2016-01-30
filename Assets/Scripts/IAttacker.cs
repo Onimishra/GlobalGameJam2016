@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public interface IAttacker {
-	void GetKill (Controllable victim);
+	void GotKill (Controllable victim);
 	List<AttackModifier> Modifiers();
 	GameObject entity();
 }

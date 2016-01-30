@@ -59,7 +59,7 @@ public class Player : Controllable, IAttacker {
 		return gameObject;
 	}
 
-	public void GetKill (Controllable victim) {
+	public void GotKill (Controllable victim) {
 		var scoreBoard = FindObjectOfType<ScoreBoard> ();
 
 		var enemy = victim.GetComponent<Enemy> ();
