@@ -31,6 +31,8 @@ public class Controllable : MonoBehaviour {
 
 	protected Animator animator;
 
+    public bool Disabled = false;
+
 	protected void Start() {
         if (!entity) {
             entity = gameObject;
@@ -53,6 +55,9 @@ public class Controllable : MonoBehaviour {
 	
 	// Update is called once per frame
 	protected void Update () {
+        if (Disabled) {
+            return;
+        }
 		ctrl.Update ();
 
 		jumping = ctrl.Jump () && curveTimer == 0;
@@ -85,10 +90,16 @@ public class Controllable : MonoBehaviour {
 		if(animator != null)
 			animator.SetBool ("Moving", movement.magnitude > 0);
 	}
+    public void Restart() {
+        Start();
+        Disabled = false;
+    }
 
 	public void AddHealth (int amount) {
 		health += amount;
 	}
+    public virtual void GotHit() {
+    }
 	public int Health () {
 		return health;
 	}

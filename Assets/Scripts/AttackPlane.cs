@@ -37,7 +37,7 @@ public class AttackPlane : MonoBehaviour {
 			foreach (var modifier in Owner.Modifiers()) {
 				modifier.ApplyEffect (Owner, victim);
 			}
-
+            victim.GotHit();
 			if (victim.Health () <= 0)
 				Owner.GotKill (victim);
 		}

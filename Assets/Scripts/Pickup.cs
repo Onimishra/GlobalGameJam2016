@@ -21,6 +21,10 @@ public class Pickup : MonoBehaviour {
         HatSprite = GetComponentInChildren<SpriteRenderer>();
         _collider = GetComponent<Collider>();
         EffectObject.CreateModifierInstance();
+
+        var p = transform.position;
+        p.z = p.y;
+        transform.position = p;
     }
 
     void OnTriggerEnter(Collider col) {
@@ -31,14 +35,24 @@ public class Pickup : MonoBehaviour {
             print("hi player ");
 
             col.transform.parent.GetComponent<Player>().AddHat(this);
-            GetComponent<Controllable>().enabled = false;
-            Attached = true;
-            _collider.enabled = false;
+            DisablePickup();
             //Destroy(gameObject);
         }
-        
     }
 
+
+    public void DisablePickup() {
+        Attached = true;
+        _collider.enabled = false;
+    }
+
+    public void EnablePickup() {
+        Attached = false;
+        _collider.enabled = true;
+        var p = transform.position;
+        p.z = p.y;
+        transform.position = p;
+    }
 
 }
 

@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Diagnostics;
 using System.Collections.Generic;
+using DG.Tweening;
+
 
 public class Player : Controllable, IAttacker {
 	[Header("Player specific")]
@@ -18,6 +20,9 @@ public class Player : Controllable, IAttacker {
     private int baseHatLayer = 1;
     private float _previousHatRotation = 0f;
 
+    [SerializeField]
+    public AnimationCurve HatCurve;
+     
 	List<AttackModifier> modifiers = new List<AttackModifier>() { new NormalDamage(3), new NormalDamage(3), new KnockBack(2) };
 	public List<AttackModifier> Modifiers() {
 		return modifiers;
@@ -75,6 +80,43 @@ public class Player : Controllable, IAttacker {
 
         //Add effect 
         modifiers.Add(hat.EffectObject.Modifier);
+    }
+
+    override public void GotHit() {
+        if (_attachedHats.Count > 0) {
+            //Drop hats
+            StartCoroutine(DropHats());
+        } else {
+            //Die
+            print("YOU DEAD");
+        }
+    }
+
+    private IEnumerator DropHats() {
+        foreach (var hat in _attachedHats) {
+            modifiers.Remove(hat.EffectObject.Modifier);
+        }
+        yield return new WaitForSeconds(0.05f);
+        for (int i = _attachedHats.Count - 1; i >= 0; i--) {
+            var hat = _attachedHats[i];
+            hat.transform.SetParent(null);
+            //Find a position for the hat
+            Vector3 target = new Vector3(Random.Range(bounds.bounds.min.x, bounds.bounds.max.x), Random.Range(bounds.bounds.min.y, bounds.bounds.max.y), bounds.bounds.center.z);
+            Vector3 midTarget = transform.position + (target - transform.position) / 2f;
+            midTarget.y = transform.position.y + 8f;
+            //hat.transform.DOMove(target, 0.9f);
+            //hat.transform.DOMove(target, 0.9f).SetEase(Ease.InOutCubic);
+            Sequence mySequence = DOTween.Sequence();
+            mySequence.Append(hat.transform.DOJump(target, 6f, 1, 1f));
+        }
+
+        yield return new WaitForSeconds(3f);
+
+
+        foreach (var hat in _attachedHats) {
+            hat.EnablePickup();
+        }
+        _attachedHats.Clear();
     }
 
     
