@@ -51,7 +51,7 @@ public class Enemy : Controllable, IAttacker {
 		plane.Owner = this;
 		plane.LifeSpan = 0.4f;
 		plane.Mask = AttackPlane.HitMask.Hero;
-		plane.transform.position = transform.position + Vector3.up * 0.5f;
+		plane.transform.position = transform.position + Vector3.up * 0.8f;
 
 		gameObject.SetActive (false);
 
