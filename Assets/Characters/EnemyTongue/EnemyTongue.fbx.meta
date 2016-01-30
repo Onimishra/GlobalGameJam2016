@@ -102,8 +102,8 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle01
-      takeName: Idle01
+      name: EnemyTongue_Mesh|Idle01
+      takeName: EnemyTongue_Mesh|Idle01
       firstFrame: 0
       lastFrame: 120
       wrapMode: 0
@@ -180,8 +180,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Walk_Forward
-      takeName: Walk_Forward
+      name: EnemyTongue_Mesh|Walk_Forward
+      takeName: EnemyTongue_Mesh|Walk_Forward
       firstFrame: 0
       lastFrame: 29
       wrapMode: 0
@@ -258,8 +258,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: AttackTongue
-      takeName: AttackTongue
+      name: EnemyTongue_Mesh|AttackTongue
+      takeName: EnemyTongue_Mesh|AttackTongue
       firstFrame: 0
       lastFrame: 59
       wrapMode: 0
@@ -336,8 +336,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: AttackNormal
-      takeName: AttackNormal
+      name: EnemyTongue_Mesh|AttackNormal
+      takeName: EnemyTongue_Mesh|AttackNormal
       firstFrame: 0
       lastFrame: 59
       wrapMode: 0
