@@ -43,7 +43,7 @@ public class Player : Controllable, IAttacker {
 		plane.MovementSpeed = 10;
 	}
 
-	public GameObject entity () {
+	new public GameObject entity () {
 		return gameObject;
 	}
 }

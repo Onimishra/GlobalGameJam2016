@@ -27,6 +27,8 @@ public class Controllable : MonoBehaviour {
 	protected Controller ctrl;
 	protected int health;
 
+	private Animator animator;
+
 	protected void Start() {
 		var p = transform.position;
 		p.z = p.y;
@@ -35,6 +37,8 @@ public class Controllable : MonoBehaviour {
 		origoScale = entity.transform.localScale;
 
 		shadowOrigoScale = shadow.transform.localScale;
+
+		animator = GetComponentInChildren<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -64,11 +68,10 @@ public class Controllable : MonoBehaviour {
 
 		entity.transform.localScale = new Vector3(Mathf.Sign(movement.x) * origoScale.x, origoScale.y, origoScale.z);
 
-//		if(bounds.bounds.Contains(nextPosition)) {
-//			transform.position = nextPosition;
-//		} else {
-			transform.position = bounds.bounds.ClosestPoint (nextPosition);
-//		}
+		transform.position = bounds.bounds.ClosestPoint (nextPosition);
+
+		if(animator != null)
+			animator.SetBool ("Moving", movement.magnitude > 0);
 	}
 
 	public void AddHealth (int amount) {
