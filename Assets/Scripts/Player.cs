@@ -51,6 +51,9 @@ public class Player : Controllable, IAttacker {
 	public void Attack() {
 		var plane = GameObject.Instantiate<AttackPlane> (normalAttackPlane);
 		plane.transform.position = attackOrigo.position;
+		var s = plane.transform.localScale;
+		s.x = s.x * Mathf.Sign (ctrl.Movement ().x);
+		plane.transform.localScale = s;
 		plane.Mask = AttackPlane.HitMask.Evils;
 		plane.Owner = this;
 		plane.Direction = ctrl.Movement ().x < 0 ? AttackPlane.AttackDirection.Left : AttackPlane.AttackDirection.Right;
