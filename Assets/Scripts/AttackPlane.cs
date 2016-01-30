@@ -29,7 +29,8 @@ public class AttackPlane : MonoBehaviour {
 			GameObject.Destroy (gameObject);
 			return;
 		}
-		LifeSpan -= Time.deltaTime;
+		if(LifeSpan != -1)
+			LifeSpan -= Time.deltaTime;
 
 		baseColor.a = Mathf.Clamp01 (renderer.material.color.a + Time.deltaTime * 10);
 		renderer.material.color = baseColor;

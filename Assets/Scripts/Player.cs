@@ -57,11 +57,11 @@ public class Player : Controllable, IAttacker {
 		var plane = GameObject.Instantiate<AttackPlane> (normalAttackPlane);
 		plane.transform.position = attackOrigo.position;
 		var s = plane.transform.localScale;
-		s.x = s.x * Mathf.Sign (ctrl.Movement ().x);
+		s.x = s.x * dir;
 		plane.transform.localScale = s;
 		plane.Mask = AttackPlane.HitMask.Evils;
 		plane.Owner = this;
-		plane.Direction = ctrl.Movement ().x < 0 ? AttackPlane.AttackDirection.Left : AttackPlane.AttackDirection.Right;
+		plane.Direction = dir < 0 ? AttackPlane.AttackDirection.Left : AttackPlane.AttackDirection.Right;
 		plane.LifeSpan = 0.1f;
 		plane.MovementSpeed = 10;
 		animator.SetTrigger ("Attacking");

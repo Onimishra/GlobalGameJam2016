@@ -20,6 +20,8 @@ public class Controllable : MonoBehaviour {
 	public GameObject shadow;
 	private Vector3 shadowOrigoScale;
 
+	protected float dir = 1;
+
 	[SerializeField]
 	AnimationCurve curve;
 	float curveTimer;
@@ -83,7 +85,10 @@ public class Controllable : MonoBehaviour {
 		var nextPosition = bounds.bounds.ClosestPoint (desiredPos);
 		nextPosition.y = nextPosition.z;
 
-		entity.transform.localScale = new Vector3(Mathf.Sign(movement.x) * origoScale.x, origoScale.y, origoScale.z);
+		if (Mathf.Abs (movement.x) > 0.01f)
+			dir = Mathf.Sign (movement.x);
+
+		entity.transform.localScale = new Vector3(dir * origoScale.x, origoScale.y, origoScale.z);
 
 		transform.position = bounds.bounds.ClosestPoint (nextPosition);
 

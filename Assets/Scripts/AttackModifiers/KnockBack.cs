@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class KnockBack : AttackModifier {
 	private float power;
+	private int frames = 8;
 
 
 	public KnockBack(float power) { this.power = power; }
@@ -16,8 +17,8 @@ public class KnockBack : AttackModifier {
 
 	private IEnumerator pushback(IAttacker attacker, Controllable victim) {
 		var vicPos = victim.gameObject.transform.position;
-		for (var i = 0; i < 3; i++) {
-			victim.gameObject.transform.Translate ((vicPos - attacker.entity ().transform.position).normalized * power/3);
+		for (var i = 0; i < frames; i++) {
+			victim.gameObject.transform.position += ((vicPos - attacker.entity ().transform.position).normalized * power/frames);
 			yield return new WaitForEndOfFrame ();
 		}
 	}
