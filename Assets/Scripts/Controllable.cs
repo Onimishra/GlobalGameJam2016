@@ -30,7 +30,7 @@ public class Controllable : MonoBehaviour {
 	[SerializeField]
 	protected int health;
 
-	private Animator animator;
+	protected Animator animator;
 
 	protected void Start() {
 		var p = transform.position;
