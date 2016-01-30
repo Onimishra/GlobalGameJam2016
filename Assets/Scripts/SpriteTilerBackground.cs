@@ -42,7 +42,7 @@ public class SpriteTilerBackground : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //Debug move camera
-        FollowTransform.transform.position += new Vector3(Time.deltaTime * 5f, 0f, 0f);
+        //FollowTransform.transform.position += new Vector3(Time.deltaTime * 5f, 0f, 0f);
 
         if (FollowTransform.position.x > _nextSwitchX) {
             MoveTilesForward();
