@@ -10,8 +10,8 @@ class TongueController : Controller{
 	float dist;
 	List<Player> players;
 
-	static readonly float baseAttackCooldown = 4;
-	float attackCooldown = baseAttackCooldown + 2;
+	static readonly float baseAttackCooldown = 2;
+	float attackCooldown = baseAttackCooldown;
 
 	bool attack;
 	bool disabled;

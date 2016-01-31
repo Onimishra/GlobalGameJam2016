@@ -94,9 +94,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.0627359
-  m_TransitionOffset: 0.08056265
-  m_ExitTime: 0.90961874
+  m_TransitionDuration: 0.06273596
+  m_TransitionOffset: 0.10588236
+  m_ExitTime: 0.96018136
   m_HasExitTime: 1
   m_HasFixedDuration: 0
   m_InterruptionSource: 0
@@ -229,8 +229,8 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: EnemyTongue_Mesh|AttackTongue
-  m_Speed: 1
+  m_Name: attack
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110151722}

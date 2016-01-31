@@ -12,8 +12,7 @@ public class EnemyTongue : Enemy, IAttacker {
 	public GameObject tongueFace;
 
 	// Use this for initialization
-	new void Start () {
-		base.Start ();
+	void Awake () {
 		health = 40;
 		ctrl = new TongueController (this, new List<Player>(GameObject.FindObjectsOfType<Player>()));
 
@@ -67,7 +66,7 @@ public class EnemyTongue : Enemy, IAttacker {
 		tongueFace.SetActive (true);
 		idleFace.SetActive (false);
 		animator.SetTrigger ("Attack");
-		yield return new WaitForSeconds (1.5f);
+		yield return new WaitForSeconds (0.4f);
 		windupFace.SetActive (false);
 		tongueFace.SetActive (false);
 		idleFace.SetActive (true);

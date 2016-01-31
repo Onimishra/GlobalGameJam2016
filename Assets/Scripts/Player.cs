@@ -3,6 +3,7 @@ using System.Collections;
 using System.Diagnostics;
 using System.Collections.Generic;
 using DG.Tweening;
+using System.Runtime.InteropServices;
 
 
 public class Player : Controllable, IAttacker {
@@ -15,14 +16,25 @@ public class Player : Controllable, IAttacker {
 
 	float baseMovementSpeed;
 
+	static readonly float chanceForEnemyToDropHats = 0.5f;
+
+	public GameObject idleFace;
+	public GameObject happyFace;
+
     public Transform HatAttachmentPoint;
     private List<Pickup> _attachedHats = new List<Pickup>();
     private int baseHatLayer = 1;
     private float _previousHatRotation = 0f;
     public HatHolder HatHolderObject;
 
+	private GameObject[] allHats;
+
+	public GameObject popcornParticle;
+
     [SerializeField]
     public AnimationCurve HatCurve;
+
+	bool canPickup = true;
      
 	List<AttackModifier> modifiers = new List<AttackModifier>() { new NormalDamage(3), new NormalDamage(3), new KnockBack(2) };
 	public List<AttackModifier> Modifiers() {
@@ -36,6 +48,12 @@ public class Player : Controllable, IAttacker {
 		baseMovementSpeed = movementSpeed;
 		ctrl = new PlayerController ();
         HatHolderObject = GameObject.Find("HatHolder").GetComponent<HatHolder>();
+
+		allHats = Resources.LoadAll<GameObject> ("hats");
+
+
+		idleFace.SetActive (true);
+		happyFace.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -71,7 +89,13 @@ public class Player : Controllable, IAttacker {
 
 	}
 
-    public void AddHat(Pickup hat) {
+    public bool AddHat(Pickup hat) {
+		if (!canPickup)
+			return false;
+		happyFace.SetActive (true);
+		idleFace.SetActive (false);
+		StartCoroutine (changeToIdleFace ());
+
         Transform parent = HatHolderObject.GetParentForHat();
         HatHolderObject.Hats.Add(hat);
         hat.gameObject.transform.parent = parent;
@@ -86,7 +110,14 @@ public class Player : Controllable, IAttacker {
 
         //Add effect 
         modifiers.Add(hat.EffectObject.Modifier);
+		return true;
     }
+
+	private IEnumerator changeToIdleFace() {
+		yield return new WaitForSeconds (1);
+		happyFace.SetActive (false);
+		idleFace.SetActive (true);
+	}
 
     override public void GotHit() {
         if (_attachedHats.Count > 0) {
@@ -99,6 +130,7 @@ public class Player : Controllable, IAttacker {
     }
 
     private IEnumerator DropHats() {
+		canPickup = false;
         List<Pickup> droppedHats = new List<Pickup>();
         foreach (var hat in _attachedHats) {
             modifiers.Remove(hat.EffectObject.Modifier);
@@ -126,10 +158,8 @@ public class Player : Controllable, IAttacker {
         foreach (var hat in droppedHats) {
             hat.EnablePickup();
         }
-        
+		canPickup = true;
     }
-
-    
 
 	new public GameObject entity () {
 		return gameObject;
@@ -143,5 +173,10 @@ public class Player : Controllable, IAttacker {
 			return;
 		
 		scoreBoard.AddScore (enemy.pointsWorth);
+
+		if(Random.value < chanceForEnemyToDropHats) {
+			var hat = GameObject.Instantiate (allHats [Random.Range (0, allHats.Length)]);
+			hat.transform.position = victim.transform.position;
+		}
 	}
 }

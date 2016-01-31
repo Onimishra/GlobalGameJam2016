@@ -67,9 +67,10 @@ public class Pickup : MonoBehaviour {
             return;
         }
         if (col.tag == _p) {
-            print("hi player ");
             player = col.transform.parent.GetComponent<Player>();
-            player.AddHat(this);
+            var wasPickedup = player.AddHat(this);
+			if (!wasPickedup)
+				return;
             _baseRotation = transform.rotation;
             DisablePickup();
             //Destroy(gameObject);

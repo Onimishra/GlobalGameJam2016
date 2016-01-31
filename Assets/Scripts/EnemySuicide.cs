@@ -9,6 +9,8 @@ public class EnemySuicide : Enemy, IAttacker {
 	public GameObject idleFace;
 	public GameObject attackFace;
 
+	public GameObject explosionParticle;
+
 	public AttackPlane attackPlane;
 	public List<AttackModifier> modifiers = new List<AttackModifier> () { 
 		new NormalDamage (5), new NormalDamage (5), 
@@ -16,8 +18,7 @@ public class EnemySuicide : Enemy, IAttacker {
 	};
 
 	// Use this for initialization
-	new void Start () {
-		base.Start ();
+	void Awake () {
 		health = 10;
 		ctrl = new SimpleAIController (this, new List<Player>(GameObject.FindObjectsOfType<Player>()));
 
@@ -75,9 +76,12 @@ public class EnemySuicide : Enemy, IAttacker {
 
 		var plane = GameObject.Instantiate<AttackPlane> (attackPlane);
 		plane.Owner = this;
-		plane.LifeSpan = 0.4f;
+		plane.LifeSpan = 0.2f;
 		plane.Mask = AttackPlane.HitMask.Hero;
 		plane.transform.position = transform.position + Vector3.up * 0.8f;
+
+		explosionParticle.transform.SetParent (null);
+		explosionParticle.SetActive (true);
 
 
 		GameObject.Destroy (gameObject, 1);
