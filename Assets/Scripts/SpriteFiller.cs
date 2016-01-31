@@ -17,11 +17,11 @@ public class SpriteFiller : MonoBehaviour {
             }
         }
         List<int> itemsToSpawn = new List<int>();
-        for (int i = 0; i < AttachmentPoints.Length; i++) {
+        for (int i = 0; i < SpritePrefabs.Count; i++) {
             itemsToSpawn.Add(i);
         }
         //print("spawning " + itemsToSpawn.Count + " items");
-        for (int i = 0; itemsToSpawn.Count > 0; i++) {
+        for (int i = 0; i < AttachmentPoints.Length; i++) {
             //print("spawning " + i);
             int nextIndex = Random.Range(0, itemsToSpawn.Count);
             //print("nextIndex " + nextIndex);
