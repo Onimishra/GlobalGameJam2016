@@ -21,6 +21,8 @@ public class Player : Controllable, IAttacker {
     private float _previousHatRotation = 0f;
     public HatHolder HatHolderObject;
 
+	public GameObject popcornParticle;
+
     [SerializeField]
     public AnimationCurve HatCurve;
      
@@ -126,10 +128,7 @@ public class Player : Controllable, IAttacker {
         foreach (var hat in droppedHats) {
             hat.EnablePickup();
         }
-        
     }
-
-    
 
 	new public GameObject entity () {
 		return gameObject;
