@@ -21,6 +21,8 @@ public class ProgressController : MonoBehaviour {
     private int _encounterNumber = 0;
     private int _enemyCheckCounter = 0;
 
+	public int Level { get { return _encounterNumber; }}
+
 	// Use this for initialization
 	void Start () {
         _cameraTargetPosition = transform.position;

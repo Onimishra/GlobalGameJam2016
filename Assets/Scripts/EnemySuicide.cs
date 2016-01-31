@@ -18,8 +18,7 @@ public class EnemySuicide : Enemy, IAttacker {
 	};
 
 	// Use this for initialization
-	new void Start () {
-		base.Start ();
+	void Awake () {
 		health = 10;
 		ctrl = new SimpleAIController (this, new List<Player>(GameObject.FindObjectsOfType<Player>()));
 

@@ -36,7 +36,7 @@ public class Controllable : MonoBehaviour {
 
     public bool Disabled = false;
 
-	protected void Start() {
+	protected virtual void Start() {
         if (!entity) {
             entity = gameObject;
         }

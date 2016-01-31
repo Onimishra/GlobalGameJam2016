@@ -12,8 +12,7 @@ public class EnemyTongue : Enemy, IAttacker {
 	public GameObject tongueFace;
 
 	// Use this for initialization
-	new void Start () {
-		base.Start ();
+	void Awake () {
 		health = 40;
 		ctrl = new TongueController (this, new List<Player>(GameObject.FindObjectsOfType<Player>()));
 
