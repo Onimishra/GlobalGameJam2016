@@ -73,7 +73,7 @@ GameObject:
   - 4: {fileID: 464064}
   - 114: {fileID: 11458826}
   - 54: {fileID: 5459446}
-  - 114: {fileID: 11488258}
+  - 114: {fileID: 11487156}
   m_Layer: 0
   m_Name: EnemySuicide
   m_TagString: Enemy
@@ -794,7 +794,7 @@ MonoBehaviour:
   attackPlane: {fileID: 11440412, guid: 9d1a4e0df77db4edfab7acf90e844884, type: 2}
 --- !u!114 &11487156
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114048}

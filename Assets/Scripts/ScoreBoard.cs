@@ -10,7 +10,7 @@ public class ScoreBoard : MonoBehaviour {
 	static readonly float mulTimeBeforeReset = 5f;
 
 	int kills;
-	static readonly int killMulTrigger = 3;
+	static readonly int killMulTrigger = 6;
 
 
 	public Text mulText;
@@ -42,7 +42,7 @@ public class ScoreBoard : MonoBehaviour {
 	}
 
 	public void AddMultiplier() {
-		multiplier = multiplier * 2;
+		multiplier += multiplier == 1 ? 1 : 2;
 		mulText.text = multiplier + "x";
 	}
 }
