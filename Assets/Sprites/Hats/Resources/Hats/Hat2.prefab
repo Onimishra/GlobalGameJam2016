@@ -144,6 +144,7 @@ MonoBehaviour:
   AttachTop: {fileID: 0}
   Attached: 0
   HatSprite: {fileID: 0}
+  player: {fileID: 0}
 --- !u!212 &21252192
 SpriteRenderer:
   m_ObjectHideFlags: 1
