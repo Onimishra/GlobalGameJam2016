@@ -371,12 +371,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clips:
   - {fileID: 8300000, guid: 93ec997ac60f5624e8d61085b865d869, type: 3}
+  - {fileID: 8300000, guid: cace40b667058fb4ca7b3bef5da9ec54, type: 3}
   - {fileID: 8300000, guid: 269d40a6a8f84c5408b38039539459bf, type: 3}
+  - {fileID: 8300000, guid: cace40b667058fb4ca7b3bef5da9ec54, type: 3}
   - {fileID: 8300000, guid: f502f7f39e70f314c89d0b1158a43a8d, type: 3}
   MyAudioSource: {fileID: 0}
   MaxSimultaneous: 2
   _currentlyPlaying: 0
   SelfLooping: 1
+  Randomize: 0
   MinWait: 1
   MaxWait: 1
 --- !u!114 &11492670

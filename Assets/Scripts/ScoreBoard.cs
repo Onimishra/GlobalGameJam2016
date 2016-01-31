@@ -15,6 +15,13 @@ public class ScoreBoard : MonoBehaviour {
 
 	public Text mulText;
 	public Text scoreText;
+    public Text hatsText;
+
+    HatHolder hh;
+
+    void Start() {
+        hh = GameObject.Find("HatHolder").GetComponent<HatHolder>();
+    }
 
 	void Update() {
 		if(multiplier > 1 && mulTimer > 0) {
@@ -24,6 +31,8 @@ public class ScoreBoard : MonoBehaviour {
 		if(multiplier > 1 && mulTimer <= 0) {
 			multiplier = 1;
 		}
+
+        hatsText.text = hh.Hats.Count.ToString();
 	}
 
 	public void AddScore(int amount) {
