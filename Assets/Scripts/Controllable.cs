@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityStandardAssets.ImageEffects;
 
 public class Controllable : MonoBehaviour {
 	[Header("Controllable")]
@@ -36,10 +37,14 @@ public class Controllable : MonoBehaviour {
 
     public bool Disabled = false;
 
+    public RandomSoundPicker RndSoundPicker;
+
 	protected virtual void Start() {
         if (!entity) {
             entity = gameObject;
         }
+
+        RndSoundPicker = GetComponent<RandomSoundPicker>();
 
 		var p = transform.position;
 		p.z = p.y;
@@ -104,18 +109,33 @@ public class Controllable : MonoBehaviour {
 	public void AddHealth (int amount) {
 		health += amount;
 	}
+
     public virtual void GotHit() {
+        
     }
+
 	public int Health () {
 		return health;
 	}
+
+    bool grey;
+
+    public void Grey(float amount) {
+        Grayscale g = Camera.main.GetComponent<Grayscale>();
+        g.enabled = !g.enabled;
+    }
+
+    public void Chroma(float amount) {
+        TwirlHatFollow v = Camera.main.GetComponent<TwirlHatFollow>();
+        v.Chroma();
+        //v.enabled = !v.enabled;
+    }
 
     public void ChangeMoveSpeed(float amount) {
         if (Time.time > slowTimeOut) {
             movementSpeed = movementSpeed * amount;
             slowTimeOut = Time.time + 3f;
         }
-
     }
     public void UpsideDown(float amount) {
         print("wut");
@@ -142,5 +162,7 @@ public class Controllable : MonoBehaviour {
             item.gameObject.AddComponent<UVTextureAnimator>();
         }
     }
+
+
     
 }

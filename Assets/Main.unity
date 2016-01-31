@@ -356,10 +356,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 442238, guid: 26825ec21ca2e409b840cd2aa6107dd3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.0003
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26825ec21ca2e409b840cd2aa6107dd3, type: 2}
   m_IsPrefabParent: 0
@@ -462,10 +458,6 @@ Prefab:
     - target: {fileID: 455682, guid: 98db7cbfaf8980c4883f4cf7f8cdacca, type: 2}
       propertyPath: m_RootOrder
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 11403428, guid: 98db7cbfaf8980c4883f4cf7f8cdacca, type: 2}
-      propertyPath: EffectObject.Type
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98db7cbfaf8980c4883f4cf7f8cdacca, type: 2}

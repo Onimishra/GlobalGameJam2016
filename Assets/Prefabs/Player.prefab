@@ -260,6 +260,8 @@ GameObject:
   - 4: {fileID: 448232}
   - 95: {fileID: 9505360}
   - 65: {fileID: 6540978}
+  - 114: {fileID: 11438004}
+  - 82: {fileID: 8244722}
   m_Layer: 0
   m_Name: PlayerCharRig
   m_TagString: Player
@@ -1846,6 +1848,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5699855, y: 2.160586, z: 0.46}
   m_Center: {x: -0.04300272, y: 0.9243029, z: 0.0000000083396765}
+--- !u!82 &8244722
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118894}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &9505360
 Animator:
   serializedVersion: 3
@@ -1903,27 +1979,11 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   Disabled: 0
+  RndSoundPicker: {fileID: 0}
   attackOrigo: {fileID: 438466}
   normalAttackPlane: {fileID: 11465830, guid: 14ad80ff57ec3470bb734749379cbad7, type: 2}
-  idleFace:
-  - {fileID: 111058}
-  - {fileID: 150418}
-  - {fileID: 122198}
-  - {fileID: 114636}
-  - {fileID: 174076}
-  happyFace:
-  - {fileID: 178242}
-  - {fileID: 104244}
-  - {fileID: 108520}
-  - {fileID: 116114}
-  - {fileID: 103032}
-  TakeDamageFace:
-  - {fileID: 150252}
-  - {fileID: 114570}
-  - {fileID: 189344}
-  - {fileID: 100010}
-  - {fileID: 109004}
-  - {fileID: 147606}
+  idleFace: {fileID: 178242}
+  happyFace: {fileID: 111058}
   HatAttachmentPoint: {fileID: 442238}
   HatHolderObject: {fileID: 0}
   popcornParticle: {fileID: 0}
@@ -1948,6 +2008,28 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &11438004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5da02a0e9c5d4986b504cb808870c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: dcbc8c7c7a9dbea4eac2a412574d27b5, type: 3}
+  - {fileID: 8300000, guid: 42e7fa6a5a7c5a34c99c42e0b93d1fe2, type: 3}
+  - {fileID: 8300000, guid: db6328de8fc2b6740804e5834ff45f6d, type: 3}
+  - {fileID: 8300000, guid: dd98bb99818794c44a23471471a0c71e, type: 3}
+  MyAudioSource: {fileID: 0}
+  MaxSimultaneous: 2
+  _currentlyPlaying: 0
+  SelfLooping: 0
+  MinWait: 1
+  MaxWait: 2
 --- !u!114 &11477090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1964,6 +2046,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  MyAudioSource: {fileID: 0}
+  MaxSimultaneous: 2
+  _currentlyPlaying: 0
+  SelfLooping: 0
+  MinWait: 1
+  MaxWait: 2
 --- !u!137 &13713562
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

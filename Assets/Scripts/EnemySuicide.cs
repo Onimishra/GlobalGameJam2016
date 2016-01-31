@@ -24,6 +24,8 @@ public class EnemySuicide : Enemy, IAttacker {
 
 		idleFace.SetActive (true);
 		attackFace.SetActive (false);
+
+        StartCoroutine(BackgroundSound());
 	}
 	
 	// Update is called once per frame
@@ -39,6 +41,20 @@ public class EnemySuicide : Enemy, IAttacker {
 			StartCoroutine (StartAttack ());
 		}
 	}
+
+    IEnumerator BackgroundSound() {
+        if (RndSoundPicker != null) {
+            yield return new WaitForSeconds(Random.RandomRange(0f, 0.5f));
+            while (true) {
+                float f = RndSoundPicker.PlayRandomSound();
+                if (f <= 0) {
+                    yield return new WaitForSeconds(f);
+                } else {
+                    yield return new WaitForSeconds(0.5f);
+                }
+            }
+        }
+    }
 
 	IEnumerator StartAttack() {
 		animator.SetTrigger ("Attack");
