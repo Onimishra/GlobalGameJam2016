@@ -43,8 +43,9 @@ public class Player : Controllable, IAttacker {
 	}
 
 	// Use this for initialization
-	new void Start () {
+	IEnumerator Start () {
 		base.Start ();
+
 		health = 100;
 		baseMovementSpeed = movementSpeed;
 		ctrl = new PlayerController ();
@@ -52,9 +53,9 @@ public class Player : Controllable, IAttacker {
 
 		allHats = Resources.LoadAll<GameObject> ("hats");
 
-		disableFaces ();
-		idleFace[Random.Range(0,idleFace.Length)].SetActive (true);
-
+		Disabled = true;
+		yield return new WaitForSeconds(5);
+		Disabled = false;
 	}
 
 	void disableFaces () {
