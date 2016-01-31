@@ -623,7 +623,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.845932, y: -4.595247, z: -0.29}
+  m_LocalPosition: {x: 6.570197, y: -2.4200616, z: -0.5903559}
   m_LocalScale: {x: 1.3137163, y: 1.3137162, z: 1.3137162}
   m_Children:
   - {fileID: 406514}
@@ -1321,7 +1321,7 @@ ParticleSystem:
     minMaxState: 0
   speed: 1
   randomSeed: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
@@ -2785,7 +2785,7 @@ ParticleSystem:
     minMaxState: 0
   speed: 1
   randomSeed: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
@@ -2794,7 +2794,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     startLifetime:
-      scalar: 1.25
+      scalar: 0.8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2810,7 +2810,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0.64000005
+          value: 0.75
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2819,7 +2819,7 @@ ParticleSystem:
         m_RotationOrder: 0
       minMaxState: 3
     startSpeed:
-      scalar: 4
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2835,7 +2835,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0.625
+          value: 0.7
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2938,7 +2938,7 @@ ParticleSystem:
         rgba: 4279440147
       minMaxState: 0
     startSize:
-      scalar: 0.35
+      scalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2954,7 +2954,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0.42857146
+          value: 0.3
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -3058,7 +3058,7 @@ ParticleSystem:
         m_RotationOrder: 0
       minMaxState: 3
     randomizeRotationDirection: 0
-    gravityModifier: 0.5
+    gravityModifier: 2
     maxNumParticles: 1000
     rotation3D: 0
   ShapeModule:
@@ -3124,17 +3124,17 @@ ParticleSystem:
     cnt1: 3
     cnt2: 3
     cnt3: 2
-    cntmax0: 5
-    cntmax1: 5
-    cntmax2: 5
-    cntmax3: 4
+    cntmax0: 8
+    cntmax1: 8
+    cntmax2: 8
+    cntmax3: 6
     time0: 0
     time1: 0.05
     time2: 0.1
     time3: 0.15
     m_BurstCount: 4
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       scalar: 1
       maxCurve:
@@ -3145,12 +3145,12 @@ ParticleSystem:
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-        - time: 0.26415086
-          value: 0.8095238
+        - time: 0.13095006
+          value: 0.89216846
           inSlope: 0.7743501
           outSlope: 0.7743501
           tangentMode: 0
-        - time: 0.67924535
+        - time: 1
           value: 1
           inSlope: 0
           outSlope: 0
@@ -3671,7 +3671,7 @@ ParticleSystem:
     enabled: 0
     multiplier: 1
   ClampVelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       scalar: 1
       maxCurve:
@@ -3814,7 +3814,7 @@ ParticleSystem:
       minMaxState: 0
     separateAxis: 0
     inWorldSpace: 0
-    dampen: 1
+    dampen: 0.05
   SizeBySpeedModule:
     enabled: 0
     curve:
