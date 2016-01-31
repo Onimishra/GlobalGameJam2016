@@ -18,8 +18,9 @@ public class Player : Controllable, IAttacker {
 
 	static readonly float chanceForEnemyToDropHats = 0.5f;
 
-	public GameObject idleFace;
-	public GameObject happyFace;
+	public GameObject [] idleFace;
+	public GameObject [] happyFace;
+	public GameObject [] TakeDamageFace;
 
     public Transform HatAttachmentPoint;
     private List<Pickup> _attachedHats = new List<Pickup>();
@@ -51,11 +52,24 @@ public class Player : Controllable, IAttacker {
 
 		allHats = Resources.LoadAll<GameObject> ("hats");
 
+		disableFaces ();
+		idleFace[Random.Range(0,idleFace.Length)].SetActive (true);
 
-		idleFace.SetActive (true);
-		happyFace.SetActive (false);
 	}
-	
+
+	void disableFaces () {
+		foreach (var face in idleFace) {
+			face.SetActive (false);
+		}
+
+		foreach (var face in happyFace) {
+			face.SetActive (false);
+		}
+
+		foreach (var face in TakeDamageFace) {
+			face.SetActive (false);
+		}
+	}
 	// Update is called once per frame
 	new protected void Update() {
 		base.Update ();
@@ -92,8 +106,9 @@ public class Player : Controllable, IAttacker {
     public bool AddHat(Pickup hat) {
 		if (!canPickup)
 			return false;
-		happyFace.SetActive (true);
-		idleFace.SetActive (false);
+		disableFaces ();
+		happyFace[Random.Range(0,happyFace.Length)].SetActive (true);
+
 		StartCoroutine (changeToIdleFace ());
 
         Transform parent = HatHolderObject.GetParentForHat();
@@ -115,12 +130,15 @@ public class Player : Controllable, IAttacker {
 
 	private IEnumerator changeToIdleFace() {
 		yield return new WaitForSeconds (1);
-		happyFace.SetActive (false);
-		idleFace.SetActive (true);
+
+		disableFaces ();
+		idleFace[Random.Range(0,idleFace.Length)].SetActive (true);
 	}
 
     override public void GotHit() {
         if (_attachedHats.Count > 0) {
+			disableFaces ();
+			TakeDamageFace[Random.Range(0,TakeDamageFace.Length)].SetActive (true);
             //Drop hats
             StartCoroutine(DropHats());
         } else {
