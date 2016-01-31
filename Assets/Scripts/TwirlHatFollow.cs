@@ -23,6 +23,10 @@ public class TwirlHatFollow : MonoBehaviour {
 
 
     void Update() {
+		if (twirlHat != null && twirlHat.transform.position.x < transform.position.x - 10f) {
+			Destroy (twirlHat.gameObject);
+		}
+
         if (twirlHat != null && Camera.main.WorldToViewportPoint(twirlHat.transform.position).x > 0.0f) {
             if (!tw.enabled) {
                 tw.enabled = true;

@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EffectObject:
-    Type: 2
+    Type: 8
     Amount: 1
   AttachBot: {fileID: 0}
   AttachTop: {fileID: 0}
@@ -188,7 +188,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: EffectObject.Type
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

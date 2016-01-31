@@ -459,6 +459,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 11403428, guid: 98db7cbfaf8980c4883f4cf7f8cdacca, type: 2}
+      propertyPath: EffectObject.Type
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98db7cbfaf8980c4883f4cf7f8cdacca, type: 2}
   m_IsPrefabParent: 0
@@ -607,14 +611,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 442794, guid: 1208af54f7e564903b647e2eaab3d1d9, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 159152, guid: 1208af54f7e564903b647e2eaab3d1d9, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 157638, guid: 1208af54f7e564903b647e2eaab3d1d9, type: 2}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -876,21 +872,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1302633624}
---- !u!1 &1427945102 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 114012, guid: f7f2d609d83a745fdb35cacf5a7ecd8c, type: 2}
-  m_PrefabInternal: {fileID: 2139544471}
---- !u!114 &1427945106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1427945102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 828ef251875174743b352e415c3e4b6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1655632792
 Prefab:
   m_ObjectHideFlags: 0
@@ -1192,18 +1173,6 @@ Prefab:
     - target: {fileID: 114048, guid: f7f2d609d83a745fdb35cacf5a7ecd8c, type: 2}
       propertyPath: m_Name
       value: EnemySuicide (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 147308, guid: f7f2d609d83a745fdb35cacf5a7ecd8c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19920602, guid: f7f2d609d83a745fdb35cacf5a7ecd8c, type: 2}
-      propertyPath: m_SortingLayerID
-      value: -1082313423
-      objectReference: {fileID: 0}
-    - target: {fileID: 19985946, guid: f7f2d609d83a745fdb35cacf5a7ecd8c, type: 2}
-      propertyPath: m_SortingLayerID
-      value: -1082313423
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7f2d609d83a745fdb35cacf5a7ecd8c, type: 2}

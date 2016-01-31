@@ -13,6 +13,7 @@ public class RandomSoundPicker : MonoBehaviour {
 
     [Header("Play looped?")]
     public bool SelfLooping;
+	public bool Randomize;
     public float MinWait = 1f;
     public float MaxWait = 2f;
 
@@ -47,6 +48,9 @@ public class RandomSoundPicker : MonoBehaviour {
         while (true) {
             yield return new WaitForSeconds(Random.RandomRange(MinWait, MaxWait));
             AudioClip ac = clips[counter % clips.Length];
+			if (Randomize) {
+				ac = clips[Random.Range(0, clips.Length)];
+			}
             //print("playing loop index " + (counter % clips.Length));
             
             MyAudioSource.PlayOneShot(ac);
