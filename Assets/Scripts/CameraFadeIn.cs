@@ -20,6 +20,7 @@ public class CameraFadeIn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        FaceTarget = GameObject.Find("HatAttachmentPoint").transform;
         cam = Camera.main;
         transform.localPosition = new Vector3(-5.325f, 0.076f, -10f);
         cam.orthographicSize = 0.01f;

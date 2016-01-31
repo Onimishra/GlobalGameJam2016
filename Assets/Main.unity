@@ -465,7 +465,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11403428, guid: 98db7cbfaf8980c4883f4cf7f8cdacca, type: 2}
       propertyPath: EffectObject.Type
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98db7cbfaf8980c4883f4cf7f8cdacca, type: 2}

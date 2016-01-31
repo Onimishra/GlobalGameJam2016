@@ -370,9 +370,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 68cbb319058454f43a86e76b2537afda, type: 3}
-  - {fileID: 8300000, guid: 046a6de445be1784b99f4139e2b98c3d, type: 3}
-  - {fileID: 8300000, guid: 0f70afa82c2e4404195b9ee92721d9f4, type: 3}
+  - {fileID: 8300000, guid: 93ec997ac60f5624e8d61085b865d869, type: 3}
+  - {fileID: 8300000, guid: 269d40a6a8f84c5408b38039539459bf, type: 3}
+  - {fileID: 8300000, guid: f502f7f39e70f314c89d0b1158a43a8d, type: 3}
   MyAudioSource: {fileID: 0}
   MaxSimultaneous: 2
   _currentlyPlaying: 0

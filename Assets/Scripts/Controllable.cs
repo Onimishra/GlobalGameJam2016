@@ -39,7 +39,7 @@ public class Controllable : MonoBehaviour {
 
     public RandomSoundPicker RndSoundPicker;
 
-	protected void Start() {
+	protected virtual void Start() {
         if (!entity) {
             entity = gameObject;
         }
