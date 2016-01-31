@@ -27,6 +27,12 @@ public class Effect {
             case EffectType.AddEffect:
                 Modifier = new AddEffect((int)Amount);
                 break;
+            case EffectType.Grey:
+                Modifier = new Grey((int)Amount);
+                break;
+            case EffectType.Chroma:
+                Modifier = new Chroma((int)Amount);
+                break;
             default:
                 break;
         }
@@ -40,5 +46,7 @@ public enum EffectType {
     MoveSlower,
     UpsideDown, 
     Fear,
-    AddEffect
+    AddEffect,
+    Grey,
+    Chroma
 }

@@ -25,8 +25,25 @@ public class EnemyTongue : Enemy, IAttacker {
 		plane.Mask = AttackPlane.HitMask.Hero;
 		plane.LifeSpan = -100;
 		plane.Direction = AttackPlane.AttackDirection.Static;
+
+        StartCoroutine(BackgroundSound());
 	}
-	
+
+    IEnumerator BackgroundSound() {
+        if (RndSoundPicker != null) {
+            yield return new WaitForSeconds(Random.RandomRange(0f, 0.5f));
+            while (true) {
+                float f = RndSoundPicker.PlayRandomSound();
+                if (f <= 0) {
+                    yield return new WaitForSeconds(f);
+                } else {
+                    yield return new WaitForSeconds(0.5f);
+                }
+            }
+        }
+    }
+
+
 	// Update is called once per frame
 	new void Update () {
 		base.Update ();
