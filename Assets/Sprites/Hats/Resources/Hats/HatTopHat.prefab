@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EffectObject:
     Type: 0
-    Amount: 0
+    Amount: 5
   AttachBot: {fileID: 0}
   AttachTop: {fileID: 0}
   Attached: 0
@@ -185,6 +185,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_SortingLayerID
       value: -1082313423
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: EffectObject.Amount
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
