@@ -11,14 +11,18 @@ public class EnemyTongue : Enemy, IAttacker {
 	public GameObject idleFace;
 	public GameObject tongueFace;
 
+	public GameObject [] idleFace2;
+	public GameObject [] windUpFace;
+	public GameObject [] TakeDamageFace;
+
+
 	// Use this for initialization
 	void Awake () {
 		health = 40;
 		ctrl = new TongueController (this, new List<Player>(GameObject.FindObjectsOfType<Player>()));
 
-		windupFace.SetActive (false);
-		tongueFace.SetActive (false);
-		idleFace.SetActive (true);
+		disableFaces2 ();
+		idleFace2[Random.Range(0,idleFace2.Length)].SetActive (true);
 
 		plane.Owner = this;
 		plane.Mask = AttackPlane.HitMask.Hero;
@@ -26,6 +30,20 @@ public class EnemyTongue : Enemy, IAttacker {
 		plane.Direction = AttackPlane.AttackDirection.Static;
 
         StartCoroutine(BackgroundSound());
+	}
+
+	void disableFaces2 () {
+		foreach (var face in idleFace2) {
+			face.SetActive (false);
+		}
+
+		foreach (var face in windUpFace) {
+			face.SetActive (false);
+		}
+
+		foreach (var face in TakeDamageFace) {
+			face.SetActive (false);
+		}
 	}
 
     IEnumerator BackgroundSound() {
