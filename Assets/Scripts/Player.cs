@@ -15,11 +15,17 @@ public class Player : Controllable, IAttacker {
 
 	float baseMovementSpeed;
 
+	static readonly float chanceForEnemyToDropHats = 0.5f;
+
     public Transform HatAttachmentPoint;
     private List<Pickup> _attachedHats = new List<Pickup>();
     private int baseHatLayer = 1;
     private float _previousHatRotation = 0f;
     public HatHolder HatHolderObject;
+
+	private GameObject[] allHats;
+
+	public GameObject popcornParticle;
 
     [SerializeField]
     public AnimationCurve HatCurve;
@@ -36,6 +42,8 @@ public class Player : Controllable, IAttacker {
 		baseMovementSpeed = movementSpeed;
 		ctrl = new PlayerController ();
         HatHolderObject = GameObject.Find("HatHolder").GetComponent<HatHolder>();
+
+		allHats = Resources.LoadAll<GameObject> ("hats");
 	}
 	
 	// Update is called once per frame
@@ -126,10 +134,7 @@ public class Player : Controllable, IAttacker {
         foreach (var hat in droppedHats) {
             hat.EnablePickup();
         }
-        
     }
-
-    
 
 	new public GameObject entity () {
 		return gameObject;
@@ -143,5 +148,10 @@ public class Player : Controllable, IAttacker {
 			return;
 		
 		scoreBoard.AddScore (enemy.pointsWorth);
+
+		if(Random.value < chanceForEnemyToDropHats) {
+			var hat = GameObject.Instantiate (allHats [Random.Range (0, allHats.Length)]);
+			hat.transform.position = victim.transform.position;
+		}
 	}
 }

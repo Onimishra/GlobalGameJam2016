@@ -840,16 +840,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: b14b65cb46f02d546866901f5109ebe1, type: 3}
-  - {fileID: 8300000, guid: 56ce38c58f0dd6d4d85228f51fe0b65e, type: 3}
-  - {fileID: 8300000, guid: bbda21e7a813b5145a74b4527a95f7c1, type: 3}
-  - {fileID: 8300000, guid: 98a7674ac8368e44f835fe16a28840ae, type: 3}
-  - {fileID: 8300000, guid: 36cded7edf308254bbd3d1f18d13b051, type: 3}
-  - {fileID: 8300000, guid: c77f7783e9056fb4db2ac5ab26a01c60, type: 3}
-  - {fileID: 8300000, guid: 8f4d4aba3fcdc074789d62ea7202d5bb, type: 3}
-  - {fileID: 8300000, guid: c97caaadd873f1e4eb532dd2081c84af, type: 3}
-  - {fileID: 8300000, guid: 9baba3318942e6f4ca8a64f09467fdd3, type: 3}
-  - {fileID: 8300000, guid: f495d0ba6d18fc14b8aa0218b3905c90, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &11485198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1343,7 +1343,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1082313423
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 669d89260c46842c0bcb575e637ced5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 215906eecba6e5047a177368d72864b2, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
