@@ -57,6 +57,7 @@ GameObject:
   - 198: {fileID: 19891048}
   - 199: {fileID: 19985946}
   - 114: {fileID: 11460450}
+  - 114: {fileID: 11450818}
   m_Layer: 0
   m_Name: SmallerFragments
   m_TagString: Untagged
@@ -624,7 +625,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.570197, y: -2.4200616, z: -0.5903559}
+  m_LocalPosition: {x: 4.85, y: -3.24, z: -0.11}
   m_LocalScale: {x: 1.3137163, y: 1.3137162, z: 1.3137162}
   m_Children:
   - {fileID: 406514}
@@ -823,6 +824,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828ef251875174743b352e415c3e4b6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11450818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828ef251875174743b352e415c3e4b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11458826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -863,6 +875,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   Disabled: 0
+  RndSoundPicker: {fileID: 0}
   pointsWorth: 5
   idleFace: {fileID: 126314}
   attackFace: {fileID: 138734}
@@ -904,6 +917,10 @@ MonoBehaviour:
   MyAudioSource: {fileID: 0}
   MaxSimultaneous: 2
   _currentlyPlaying: 0
+  SelfLooping: 1
+  Randomize: 1
+  MinWait: 0
+  MaxWait: 2
 --- !u!137 &13712476
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
