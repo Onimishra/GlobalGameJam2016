@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 public class Controllable : MonoBehaviour {
 	[Header("Controllable")]

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
+using System.IO;
 
 public class ImageDownload : MonoBehaviour {
     public string[] DownloadURLs;
@@ -36,8 +37,7 @@ public class ImageDownload : MonoBehaviour {
 
             if (!System.IO.File.Exists(filePath)) {
                 WWW www = new WWW(downloadURL);
-                yield return www;
-                System.IO.File.WriteAllBytes(filePath, www.bytes);
+               	//File.WriteAllBytes(filePath, www.bytes);
                 DownloadedImages.Add(filePath);
             } else {
                 print("FILE (" + fileName + ") EXISTS");

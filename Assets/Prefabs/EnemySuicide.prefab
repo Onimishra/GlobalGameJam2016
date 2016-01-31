@@ -56,6 +56,7 @@ GameObject:
   - 4: {fileID: 464064}
   - 114: {fileID: 11458826}
   - 54: {fileID: 5459446}
+  - 114: {fileID: 11487156}
   m_Layer: 0
   m_Name: EnemySuicide
   m_TagString: Enemy
@@ -561,7 +562,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.38, y: -2.32, z: -0.29}
+  m_LocalPosition: {x: 6.570197, y: -2.4200616, z: -0.5903559}
   m_LocalScale: {x: 1.3137163, y: 1.3137162, z: 1.3137162}
   m_Children:
   - {fileID: 406514}
@@ -718,6 +719,28 @@ MonoBehaviour:
   idleFace: {fileID: 126314}
   attackFace: {fileID: 138734}
   attackPlane: {fileID: 11440412, guid: 9d1a4e0df77db4edfab7acf90e844884, type: 2}
+--- !u!114 &11487156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5da02a0e9c5d4986b504cb808870c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: b14b65cb46f02d546866901f5109ebe1, type: 3}
+  - {fileID: 8300000, guid: 56ce38c58f0dd6d4d85228f51fe0b65e, type: 3}
+  - {fileID: 8300000, guid: bbda21e7a813b5145a74b4527a95f7c1, type: 3}
+  - {fileID: 8300000, guid: 98a7674ac8368e44f835fe16a28840ae, type: 3}
+  - {fileID: 8300000, guid: 36cded7edf308254bbd3d1f18d13b051, type: 3}
+  - {fileID: 8300000, guid: c77f7783e9056fb4db2ac5ab26a01c60, type: 3}
+  - {fileID: 8300000, guid: 8f4d4aba3fcdc074789d62ea7202d5bb, type: 3}
+  - {fileID: 8300000, guid: c97caaadd873f1e4eb532dd2081c84af, type: 3}
+  - {fileID: 8300000, guid: 9baba3318942e6f4ca8a64f09467fdd3, type: 3}
+  - {fileID: 8300000, guid: f495d0ba6d18fc14b8aa0218b3905c90, type: 3}
 --- !u!137 &13712476
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
