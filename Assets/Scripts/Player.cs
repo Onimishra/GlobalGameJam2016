@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using DG.Tweening;
 using System.Runtime.InteropServices;
+using UnityEngine.SceneManagement;
 
 
 public class Player : Controllable, IAttacker {
@@ -145,6 +146,7 @@ public class Player : Controllable, IAttacker {
         } else {
             //Die
             print("YOU DEAD");
+			SceneManager.LoadScene ("Main");
         }
     }
 
