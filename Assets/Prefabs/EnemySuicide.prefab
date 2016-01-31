@@ -56,6 +56,7 @@ GameObject:
   - 4: {fileID: 444074}
   - 198: {fileID: 19891048}
   - 199: {fileID: 19985946}
+  - 114: {fileID: 11460450}
   m_Layer: 0
   m_Name: SmallerFragments
   m_TagString: Untagged
@@ -622,7 +623,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.570197, y: -2.4200616, z: -0.5903559}
+  m_LocalPosition: {x: 5.845932, y: -4.595247, z: -0.29}
   m_LocalScale: {x: 1.3137163, y: 1.3137162, z: 1.3137162}
   m_Children:
   - {fileID: 406514}
@@ -792,9 +793,20 @@ MonoBehaviour:
   attackFace: {fileID: 138734}
   explosionParticle: {fileID: 147308}
   attackPlane: {fileID: 11440412, guid: 9d1a4e0df77db4edfab7acf90e844884, type: 2}
+--- !u!114 &11460450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828ef251875174743b352e415c3e4b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11487156
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114048}
@@ -4206,7 +4218,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1082313423
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -4247,7 +4259,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1082313423
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
