@@ -6,8 +6,9 @@ public class EnemySuicide : Enemy, IAttacker {
 	
 	private bool attacking;
 
-	public GameObject idleFace;
-	public GameObject attackFace;
+	public GameObject [] idleFace;
+	public GameObject [] windUpFace;
+	public GameObject [] TakeDamageFace;
 
 	public GameObject explosionParticle;
 
@@ -22,8 +23,9 @@ public class EnemySuicide : Enemy, IAttacker {
 		health = 10;
 		ctrl = new SimpleAIController (this, new List<Player>(GameObject.FindObjectsOfType<Player>()));
 
-		idleFace.SetActive (true);
-		attackFace.SetActive (false);
+
+		disableFaces2 ();
+		idleFace[Random.Range(0,idleFace.Length)].SetActive (true);
 
         StartCoroutine(BackgroundSound());
 	}
@@ -39,6 +41,20 @@ public class EnemySuicide : Enemy, IAttacker {
 		if(ctrl.Attack() && !attacking) {
 			attacking = true;
 			StartCoroutine (StartAttack ());
+		}
+	}
+
+	void disableFaces2 () {
+		foreach (var face in idleFace) {
+			face.SetActive (false);
+		}
+
+		foreach (var face in windUpFace) {
+			face.SetActive (false);
+		}
+
+		foreach (var face in TakeDamageFace) {
+			face.SetActive (false);
 		}
 	}
 
@@ -58,8 +74,8 @@ public class EnemySuicide : Enemy, IAttacker {
 
 	IEnumerator StartAttack() {
 		animator.SetTrigger ("Attack");
-		idleFace.SetActive (false);
-		attackFace.SetActive (true);
+		disableFaces2 ();
+		windUpFace[Random.Range(0,windUpFace.Length)].SetActive (true);
 
 		float timer = 1;
 		var renderer = GetComponentsInChildren<Renderer> ();
