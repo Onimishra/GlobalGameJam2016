@@ -44,10 +44,10 @@ MonoBehaviour:
   - {fileID: 131834, guid: b32eb3363c25b5b4ab62b805136753d0, type: 2}
   - {fileID: 120308, guid: 6008a0905320b7740b10bfd86671693d, type: 2}
   - {fileID: 119384, guid: 88cf7f9b32652944da87795e30abc0cb, type: 2}
-  PrefabCopies: 3
+  PrefabCopies: 4
   FollowTransform: {fileID: 0}
   MinDistance: 1
-  MaxDistance: 5
+  MaxDistance: 2
   SpawnAheadDistance: 20
   DespawnBehindDistance: 10
 --- !u!1001 &100100000
